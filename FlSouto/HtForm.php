@@ -32,6 +32,9 @@ class HtForm implements \IteratorAggregate{
 
 	function context($context){
 		$this->context = $context;
+		foreach($this->fields as $field){
+			$field->context($context);
+		}
 		return $this;
 	}
 
