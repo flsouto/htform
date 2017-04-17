@@ -10,6 +10,7 @@
     ],
     "minimum-stability": "dev",
     "keywords"  : ["forms","html","data","processing","request","http"],
+    "php" : ">=5.6.2",
     "require": {
         "flsouto/htattrs": "^1.0",
         "flsouto/htbutton": "^1.0",
