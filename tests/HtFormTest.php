@@ -89,6 +89,17 @@ class HtFormTest extends PHPUnit\Framework\TestCase{
 
 	}
 
+	function testInline(){
+
+		$form = new HtForm();
+		$form->inline(true);
+		$form->textin('fst_name')->label('First Name');
+		$form->textin('lst_name')->label('Last Name');
+
+		$this->assertGreaterThanOrEqual(2, substr_count("$form","display:inline-block"));
+
+	}
+
 
 }
 
