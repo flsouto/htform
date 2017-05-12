@@ -100,14 +100,21 @@ class HtFormTest extends PHPUnit\Framework\TestCase{
 
 	}
 
+	function testReadonly(){
+
+	    $form = new HtForm();
+	    $form->readonly(true);
+        $form->textin('fst_name')->label('First Name');
+        $form->textin('lst_name')->label('Last Name');
+
+        $this->assertGreaterThanOrEqual(2, substr_count("$form","readonly"));
+
+    }
+
 
 }
 
 // TODO: 
-
-//test inline
-
-//test readonly 
 
 //test populate data with context
 
