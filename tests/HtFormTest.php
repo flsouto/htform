@@ -111,6 +111,25 @@ class HtFormTest extends PHPUnit\Framework\TestCase{
 
     }
 
+    function testPopulate(){
+
+	    $form = new HtForm();
+        $form->textin('name')->label('Name');
+        $form->textin('email')->label('Email');
+        $form->select('job')->caption("Job:")->options([1=>'Secretary',2=>'Manager',3=>'Programmer']);
+
+        $form->context([
+            'name' => 'Mary',
+            'email' => 'dontmaryme@doman.com',
+            'job' => 1
+        ]);
+
+        $this->assertContains("Mary","$form");
+        $this->assertContains("dontmaryme@doman.com", "$form");
+        $this->assertContains('value="1" selected', "$form");
+
+    }
+
 
 }
 
