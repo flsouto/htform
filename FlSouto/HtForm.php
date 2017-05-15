@@ -12,7 +12,8 @@ class HtForm implements \IteratorAggregate{
 
 	function __construct(){
 		$this->attrs = new HtAttrs;
-		$this->attrs['id'] = uniqid();
+		$this->attrs['id'] = 'form_'.uniqid();
+		$this->attrs['action'] = '?';
 	}
 
 	function attrs(array $attrs){
