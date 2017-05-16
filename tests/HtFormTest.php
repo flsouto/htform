@@ -95,6 +95,7 @@ class HtFormTest extends PHPUnit\Framework\TestCase{
 		$form->inline(true);
 		$form->textin('fst_name')->label('First Name');
 		$form->textin('lst_name')->label('Last Name');
+        $form->button('Submit');
 
 		$this->assertGreaterThanOrEqual(2, substr_count("$form","display:inline-block"));
 
@@ -106,6 +107,7 @@ class HtFormTest extends PHPUnit\Framework\TestCase{
 	    $form->readonly(true);
         $form->textin('fst_name')->label('First Name');
         $form->textin('lst_name')->label('Last Name');
+        $form->button('Submit');
 
         $this->assertGreaterThanOrEqual(2, substr_count("$form","readonly"));
 
@@ -117,6 +119,7 @@ class HtFormTest extends PHPUnit\Framework\TestCase{
         $form->textin('name')->label('Name');
         $form->textin('email')->label('Email');
         $form->select('job')->caption("Job:")->options([1=>'Secretary',2=>'Manager',3=>'Programmer']);
+        $form->button('Submit');
 
         $form->context([
             'name' => 'Mary',
@@ -130,12 +133,38 @@ class HtFormTest extends PHPUnit\Framework\TestCase{
 
     }
 
+    function testProcessWithoutError(){
+
+        // Simulate form submition
+        $_REQUEST = [
+            'name' => 'Mary',
+            'email' => 'dontmaryme@doman.com',
+            '_submit' => 1
+        ];
+
+        $form = new HtForm();
+        $form->textin('name')->label('Name');
+        $form->textin('email')->label('Email');
+        $form->button('_submit','Submit');
+
+        $form->context($_REQUEST);
+
+        // Use "value" method to extract value of a field
+        if($form->value('_submit')){
+
+            // Extract all fields, except those prefixed with underscore
+            $result = $form->process();
+
+        }
+
+        $this->assertArraySubset($result->data, $_REQUEST);
+
+    }
+
 
 }
 
 // TODO: 
-
-//test populate data with context
 
 //test processing without error
 
