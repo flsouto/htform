@@ -161,15 +161,82 @@ class HtFormTest extends PHPUnit\Framework\TestCase{
 
     }
 
+    function testProcessWithError(){
+
+        // Simulate INVALID form data
+        $_REQUEST = [
+            'name' => '',
+            'email' => 'dontmaryme__doman.com',
+            '_submit' => 1
+        ];
+
+        $form = new HtForm();
+        $form->textin('name')->label('Name')->required();
+        $form->textin('email')->label('Email')
+            ->required()
+            ->filters()->ifnot('@', "Invalid email address");
+
+        $form->button('_submit','Submit');
+
+        $form->context($_REQUEST);
+
+        // Use "value" method to extract value of a field
+        if($form->value('_submit')){
+
+            // Extract all fields, except those prefixed with underscore
+            $result = $form->process();
+
+        }
+
+        $this->assertNotEmpty($result->errors['name']);
+        $this->assertNotEmpty($result->errors['email']);
+
+        $this->assertContains($result->errors['name'], "$form");
+        $this->assertContains($result->errors['email'], "$form");
+
+    }
+
+    function testNamespacing(){
+
+        // The data is sent by the form in the following structure:
+        $_REQUEST = [
+            'user' => [
+                'name' => 'Mary',
+                'email' => '' // this should result in an error
+            ],
+            'person' => [
+                'number' => 666,
+                'city' => 'Nowhereland'
+            ],
+            '_submit' => 1 // this field is in the "root"
+        ];
+
+        $form = new HtForm();
+        // Namespacing is achieved using square brackets:
+        $form->textin('user[name]')->label('Username');
+        $form->textin('user[email]')->label('E-mail')->required("Email is required!");
+        $form->textin('person[number]')->label('Number');
+        $form->textin('person[city]')->label('City');
+        $form->button('_submit','Submit');
+
+        $form->context($_REQUEST);
+
+        // Use "value" method to extract value of a field
+        if($form->value('_submit')){
+
+            // Extract all fields, except those prefixed with underscore
+            $result = $form->process();
+
+        }
+
+        $this->assertEquals('Mary', $result->data['user[name]']);
+        $this->assertEquals('Email is required!', $result->errors['user[email]']);
+
+    }
+
 
 }
 
 // TODO: 
-
-//test processing without error
-
-//test processing with error
-
-//test namespacing fields
 
 //test unfold data
