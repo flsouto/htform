@@ -189,6 +189,32 @@ class HtFormResult{
 	var $data = [];
 	var $errors = [];
 
-	function unfold(){}
+	function unfold(){
+
+	    foreach(['data','errors'] as $var){
+
+            $result = [];
+
+            foreach($this->$var as $path=>$value){
+
+                $context = &$result;
+
+                foreach(explode("[",$path) as $key){
+                    $key = str_replace(']','',$key);
+                    $context = &$context[$key];
+                }
+
+                $context = $value;
+
+            }
+
+            $this->$var = $result;
+
+        }
+
+        return $this;
+
+
+    }
 
 }
