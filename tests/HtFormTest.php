@@ -234,9 +234,30 @@ class HtFormTest extends PHPUnit\Framework\TestCase{
 
     }
 
+    function testUnfold(){
+
+        $_REQUEST = [
+            'user' => [
+                'name' => 'Mary',
+                'email' => ''
+            ],
+            '_submit' => 1
+        ];
+
+        $form = new HtForm();
+        $form->textin('user[name]')->label('Username');
+        $form->textin('user[email]')->label('E-mail')->required("Email is required!");
+        $form->button('_submit','Submit');
+
+        $form->context($_REQUEST);
+
+        if($form->value('_submit')){
+            $result = $form->process()->unfold();
+        }
+
+        $this->assertEquals('Mary', $result->data['user']['name']);
+        $this->assertEquals('Email is required!', $result->errors['user']['email']);
+    }
+
 
 }
-
-// TODO: 
-
-//test unfold data
