@@ -31,14 +31,14 @@ Outputs:
 
 ```html
 
-<form id="form_5921f46e92b5f" action="?">
- <div class="widget field_5921f46e93157" style="display:block">
-   <input id="field_5921f46e93157" name="email" value="" />
+<form id="form_5921f5a068b82" action="?">
+ <div class="widget field_5921f5a06919e" style="display:block">
+   <input id="field_5921f5a06919e" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5921f46e932e3" name="submit" style="display:block" value="field_5921f46e932e3">Submit
+   <button id="field_5921f5a069335" name="submit" style="display:block" value="field_5921f5a069335">Submit
    </button>
  </div>
 </form>
@@ -67,15 +67,15 @@ Outputs:
 
 ```html
 
-<form id="form_5921f46e94f85" action="?">
- <div class="widget field_5921f46e9500c" style="display:block">
-   <label style="display:block" for="field_5921f46e9500c">E-mail: </label>
-   <input id="field_5921f46e9500c" name="email" value="" />
+<form id="form_5921f5a06b024" action="?">
+ <div class="widget field_5921f5a06b0b5" style="display:block">
+   <label style="display:block" for="field_5921f5a06b0b5">E-mail: </label>
+   <input id="field_5921f5a06b0b5" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5921f46e950a9" name="submit" style="display:block" value="field_5921f46e950a9">Submit
+   <button id="field_5921f5a06b153" name="submit" style="display:block" value="field_5921f5a06b153">Submit
    </button>
  </div>
 </form>
@@ -100,15 +100,15 @@ Outputs:
 
 ```html
 
-<form id="form_5921f46e95834" action="?">
- <div class="widget field_5921f46e958b8" style="display:block">
-   <label style="display:inline-block;margin-right:10px" for="field_5921f46e958b8">E-mail:</label>
-   <input id="field_5921f46e958b8" name="email" value="" />
+<form id="form_5921f5a06b987" action="?">
+ <div class="widget field_5921f5a06ba1a" style="display:block">
+   <label style="display:inline-block;margin-right:10px" for="field_5921f5a06ba1a">E-mail:</label>
+   <input id="field_5921f5a06ba1a" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5921f46e95959" name="submit" style="display:block" value="field_5921f46e95959">Submit
+   <button id="field_5921f5a06babf" name="submit" style="display:block" value="field_5921f5a06babf">Submit
    </button>
  </div>
 </form>
@@ -133,21 +133,21 @@ Outputs:
 
 ```html
 
-<form id="form_5921f46e9611b" action="?">
- <div class="widget field_5921f46e9619e" style="display:block">
-   <input id="field_5921f46e9619e" name="email" value="" />
+<form id="form_5921f5a06c2f4" action="?">
+ <div class="widget field_5921f5a06c385" style="display:block">
+   <input id="field_5921f5a06c385" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5921f46e96242" name="submit" style="display:block" value="field_5921f46e96242">Submit
+   <button id="field_5921f5a06c42d" name="submit" style="display:block" value="field_5921f5a06c42d">Submit
    </button>
  </div>
 </form>
 
 ```
 
-### Specifying Field Attributes
+### Specifying Form Attributes
 
 ```php
 <?php
@@ -170,13 +170,13 @@ Outputs:
 ```html
 
 <form id="my_form" action="some_script.php" method="post" class="some_class">
- <div class="widget field_5921f46e96a3c" style="display:block">
-   <input id="field_5921f46e96a3c" name="email" value="" />
+ <div class="widget field_5921f5a06cbaa" style="display:block">
+   <input id="field_5921f5a06cbaa" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5921f46e96ad2" name="submit" style="display:block" value="field_5921f46e96ad2">Submit
+   <button id="field_5921f5a06cc6d" name="submit" style="display:block" value="field_5921f5a06cc6d">Submit
    </button>
  </div>
 </form>
@@ -211,27 +211,27 @@ Outputs:
 ```html
 
 <form action="some_script.php" method="post" class="some_class">
- <div class="widget field_5921f46e9732b" style="display:block">
-   <label style="display:block" for="field_5921f46e9732b">Email:</label>
-   <input id="field_5921f46e9732b" name="email" size="50" class="email" value="" />
+ <div class="widget field_5921f5a06d498" style="display:block">
+   <label style="display:block" for="field_5921f5a06d498">Email:</label>
+   <input id="field_5921f5a06d498" name="email" size="50" class="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5921f46e9750d" style="display:block">
-   <label style="display:block" for="field_5921f46e9750d">Comment:</label>
-   <textarea id="field_5921f46e9750d" name="comment" cols="50" rows="10"></textarea>
+ <div class="widget field_5921f5a06d67d" style="display:block">
+   <label style="display:block" for="field_5921f5a06d67d">Comment:</label>
+   <textarea id="field_5921f5a06d67d" name="comment" cols="50" rows="10"></textarea>
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5921f46e97770" style="display:block">
-   <label style="display:block" for="field_5921f46e97770">
-   <input id="field_5921f46e97770" name="newsletter" type="checkbox" value="1" checked="checked" /> Receive Newsletter?</label>
+ <div class="widget field_5921f5a06d8e1" style="display:block">
+   <label style="display:block" for="field_5921f5a06d8e1">
+   <input id="field_5921f5a06d8e1" name="newsletter" type="checkbox" value="1" checked="checked" /> Receive Newsletter?</label>
    <input type="hidden" name="newsletter_submit" value="1" />
  </div>
  <div>
-   <input id="field_5921f46e97bbd" name="key" type="hidden" value="value" />
-   <div class="widget field_5921f46e97e87" style="display:block">
-     <select id="field_5921f46e97e87" name="gender">
+   <input id="field_5921f5a06dd1f" name="key" type="hidden" value="value" />
+   <div class="widget field_5921f5a06dffe" style="display:block">
+     <select id="field_5921f5a06dffe" name="gender">
        <option value="0">Choose Gender:
        </option>
        <option value="M">Male
@@ -242,9 +242,9 @@ Outputs:
      <div style="color:yellow;background:red" class="error">
      </div>
    </div>
-   <button id="field_5921f46e97f2f" name="submit" style="display:block" value="field_5921f46e97f2f">Submit
+   <button id="field_5921f5a06e0b3" name="submit" style="display:block" value="field_5921f5a06e0b3">Submit
    </button>
-   <button id="field_5921f46e97fc9" name="Cancel" style="display:block" value="field_5921f46e97fc9">Cancel
+   <button id="field_5921f5a06e150" name="Cancel" style="display:block" value="field_5921f5a06e150">Cancel
    </button>
  </div>
 </form>
@@ -271,21 +271,21 @@ Outputs:
 
 ```html
 
-<form id="form_5921f46e9919b" action="?">
- <div class="widget field_5921f46e99223" style="display:inline-block;vertical-align:text-top">
-   <label style="display:block" for="field_5921f46e99223">First Name</label>
-   <input id="field_5921f46e99223" name="fst_name" value="" />
+<form id="form_5921f5a06f3b7" action="?">
+ <div class="widget field_5921f5a06f447" style="display:inline-block;vertical-align:text-top">
+   <label style="display:block" for="field_5921f5a06f447">First Name</label>
+   <input id="field_5921f5a06f447" name="fst_name" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5921f46e992bd" style="display:inline-block;vertical-align:text-top">
-   <label style="display:block" for="field_5921f46e992bd">Last Name</label>
-   <input id="field_5921f46e992bd" name="lst_name" value="" />
+ <div class="widget field_5921f5a06f4e3" style="display:inline-block;vertical-align:text-top">
+   <label style="display:block" for="field_5921f5a06f4e3">Last Name</label>
+   <input id="field_5921f5a06f4e3" name="lst_name" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5921f46e9934d" name="submit" style="display:inline-block;vertical-align:text-top" value="field_5921f46e9934d">Submit
+   <button id="field_5921f5a06f576" name="submit" style="display:inline-block;vertical-align:text-top" value="field_5921f5a06f576">Submit
    </button>
  </div>
 </form>
@@ -312,21 +312,21 @@ Outputs:
 
 ```html
 
-<form id="form_5921f46e99d5f" action="?">
- <div class="widget field_5921f46e99de6" style="display:block">
-   <label style="display:block" for="field_5921f46e99de6">First Name</label>
-   <input id="field_5921f46e99de6" name="fst_name" value="" readonly="readonly" />
+<form id="form_5921f5a070b61" action="?">
+ <div class="widget field_5921f5a070bf6" style="display:block">
+   <label style="display:block" for="field_5921f5a070bf6">First Name</label>
+   <input id="field_5921f5a070bf6" name="fst_name" value="" readonly="readonly" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5921f46e99e7f" style="display:block">
-   <label style="display:block" for="field_5921f46e99e7f">Last Name</label>
-   <input id="field_5921f46e99e7f" name="lst_name" value="" readonly="readonly" />
+ <div class="widget field_5921f5a070c91" style="display:block">
+   <label style="display:block" for="field_5921f5a070c91">Last Name</label>
+   <input id="field_5921f5a070c91" name="lst_name" value="" readonly="readonly" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5921f46e99f13" name="submit" style="display:block" value="field_5921f46e99f13">Submit
+   <button id="field_5921f5a070d25" name="submit" style="display:block" value="field_5921f5a070d25">Submit
    </button>
  </div>
 </form>
@@ -359,21 +359,21 @@ Outputs:
 
 ```html
 
-<form id="form_5921f46e9a98e" action="?">
- <div class="widget field_5921f46e9aa12" style="display:block">
-   <label style="display:block" for="field_5921f46e9aa12">Name</label>
-   <input id="field_5921f46e9aa12" name="name" value="Mary" />
+<form id="form_5921f5a071732" action="?">
+ <div class="widget field_5921f5a0717b9" style="display:block">
+   <label style="display:block" for="field_5921f5a0717b9">Name</label>
+   <input id="field_5921f5a0717b9" name="name" value="Mary" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5921f46e9ab0c" style="display:block">
-   <label style="display:block" for="field_5921f46e9ab0c">Email</label>
-   <input id="field_5921f46e9ab0c" name="email" value="dontmaryme@doman.com" />
+ <div class="widget field_5921f5a071857" style="display:block">
+   <label style="display:block" for="field_5921f5a071857">Email</label>
+   <input id="field_5921f5a071857" name="email" value="dontmaryme@doman.com" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5921f46e9ab9c" style="display:block">
-   <select id="field_5921f46e9ab9c" name="job">
+ <div class="widget field_5921f5a0718e7" style="display:block">
+   <select id="field_5921f5a0718e7" name="job">
      <option value="0">Job:
      </option>
      <option value="1" selected="selected">Secretary
@@ -387,7 +387,7 @@ Outputs:
    </div>
  </div>
  <div>
-   <button id="field_5921f46e9ac34" name="submit" style="display:block" value="field_5921f46e9ac34">Submit
+   <button id="field_5921f5a071986" name="submit" style="display:block" value="field_5921f5a071986">Submit
    </button>
  </div>
 </form>
