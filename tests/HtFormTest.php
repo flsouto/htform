@@ -110,7 +110,7 @@ Outputs:
     }
 
 /*
-### Specifying Field Attributes
+### Specifying Form Attributes
 
 #mdx:Attrs
 
