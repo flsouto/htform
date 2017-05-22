@@ -52,6 +52,8 @@ class HtFormTest extends PHPUnit\Framework\TestCase{
 
 ### Adding labels to fields
 
+By default fields don't have a label but you can add one by calling the `label` setter on a field instance:
+
 #mdx:FieldWithLabel
 
 Outputs:
@@ -74,6 +76,8 @@ Outputs:
 /*
 ### Making field labels inline
 
+By default a field's label is a block level element. You can change that by passing the `inline => true` flag:
+
 #mdx:FieldWithLabelInline
 
 Outputs:
@@ -93,11 +97,16 @@ Outputs:
 /*
 ### Defining Placeholders
 
+Use can use the `placeholder` setter which is really just a shortcut for setting the field's 'placeholder' attribute:
+
 #mdx:FieldWithPlaceholder
 
 Outputs:
 
 #mdx:FieldWithPlaceholder -o httidy
+
+Other attributes can be set by passing an associative array to the field's `attrs` method.
+
 */
     function testFieldWithPlaceholder(){
         #mdx:FieldWithPlaceholder
@@ -110,39 +119,29 @@ Outputs:
     }
 
 /*
-### Specifying Form Attributes
-
-#mdx:Attrs
-
-Outputs:
-
-#mdx:Attrs -o httidy
-*/
-    function testAttrs(){
-        #mdx:Attrs
-        $form = new HtForm();
-        $form->method('POST')
-             ->action('some_script.php')
-             ->attrs(['class'=>'some_class','id'=>'my_form']);
-
-        $form->textin('email');
-        $form->button('Submit');
-        #/mdx echo $form
-        $this->assertContains("POST","$form");
-        $this->assertContains("some_script.php","$form");
-        $this->assertContains("some_class","$form");
-        $this->assertContains("my_form","$form");
-
-    }
-
-/*
 ### Adding different types of fields
+
+A form is all about attaching a bunch of fields for taking user input. Different field types are available in this library:
 
 #mdx:DifferentFieldTypes
 
 Outputs:
 
 #mdx:DifferentFieldTypes -o httidy
+
+Each field type is defined in its own class. These classes have a repostory of its own too.
+For more info on the fields API, take a look in the following repositories:
+
+- HtField - Abstract base class for all fields
+    - HtButton - Non-widget field
+    - HtHidden - Non-widget field
+
+- HtWidget - Base class for all widget types (extends HtField)
+    - HtTextin - Widget for singleline text input
+    - HtTextar - Widget for multiline text input
+    - HtCheckb - Widget for boolean input (checkbox)
+    - HtSelect - Widget for choosing an option from a list
+
 */
     function testDifferentFieldTypes(){
         #mdx:DifferentFieldTypes
@@ -217,6 +216,34 @@ Outputs:
         $form->button('Submit');
         #/mdx echo $form
         $this->assertGreaterThanOrEqual(2, substr_count("$form","readonly"));
+
+    }
+
+/*
+### Changing Form Attributes
+
+Take a look at this example which changes a couple of attributes on the form:
+
+#mdx:Attrs
+
+Outputs:
+
+#mdx:Attrs -o httidy
+*/
+    function testAttrs(){
+        #mdx:Attrs
+        $form = new HtForm();
+        $form->method('POST')
+            ->action('some_script.php')
+            ->attrs(['class'=>'some_class','id'=>'my_form']);
+
+        $form->textin('email');
+        $form->button('Submit');
+        #/mdx echo $form
+        $this->assertContains("POST","$form");
+        $this->assertContains("some_script.php","$form");
+        $this->assertContains("some_class","$form");
+        $this->assertContains("my_form","$form");
 
     }
 
