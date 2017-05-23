@@ -132,15 +132,15 @@ Outputs:
 Each field type is defined in its own class. These classes have a repostory of its own too.
 For more info on the fields API, take a look in the following repositories:
 
-- HtField - Abstract base class for all fields
-    - HtButton - Non-widget field
-    - HtHidden - Non-widget field
+- [HtField](http://github.com/flsouto/htfield) - Abstract base class for all fields
+    - [HtButton](http://github.com/flsouto/htbutton) - Non-widget field
+    - [HtHidden](http://github.com/flsouto/hthidden) - Non-widget field
 
-- HtWidget - Base class for all widget types (extends HtField)
-    - HtTextin - Widget for singleline text input
-    - HtTextar - Widget for multiline text input
-    - HtCheckb - Widget for boolean input (checkbox)
-    - HtSelect - Widget for choosing an option from a list
+- [HtWidget](http://github.com/flsouto/htwidget) - Base class for all widget types (extends HtField)
+    - [HtTextin](http://github.com/flsouto/httextin) - Widget for single-line text input
+    - [HtTextar](http://github.com/flsouto/httextar) - Widget for multi-line text input
+    - [HtCheckb](http://github.com/flsouto/htcheckb) - Widget for boolean input (checkbox)
+    - [HtSelect](http://github.com/flsouto/htselect) - Widget for choosing an option from a list
 
 */
     function testDifferentFieldTypes(){
@@ -177,6 +177,10 @@ For more info on the fields API, take a look in the following repositories:
 
 /*
 ### Make all fields inline at once
+
+Sometimes you need to build "quick search" or "quick filtering" type of forms in which case all fields are
+in the same line. For this you can use the `inline` method on the form instance to make all fields become inline when the form
+is rendered:
 
 #mdx:Inline
 
