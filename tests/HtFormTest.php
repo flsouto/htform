@@ -178,9 +178,8 @@ For more info on the fields API, take a look in the following repositories:
 /*
 ### Make all fields inline at once
 
-Sometimes you need to build "quick search" or "quick filtering" type of forms in which case all fields are
-in the same line. For this you can use the `inline` method on the form instance to make all fields become inline when the form
-is rendered:
+Sometimes you need to build "quick search" type of forms in which all fields are rendered
+in a single line. For this you can use the `inline` method on the form instance:
 
 #mdx:Inline
 
@@ -203,6 +202,8 @@ Outputs:
 
 /*
 ### Make all fields readonly at once
+Sometimes you want to reuse the same form layout/structure but in readonly mode. In this case
+you can call the `readonly` method of the form object in order to disable editing on all fields:
 
 #mdx:Readonly
 
@@ -226,7 +227,13 @@ Outputs:
 /*
 ### Changing Form Attributes
 
-Take a look at this example which changes a couple of attributes on the form:
+By default, the form is rendered with the following default attributes:
+
+- method: GET
+- action: ?
+- id: random id
+
+But these can be changed easily by calling the corresponding setters on the form instance:
 
 #mdx:Attrs
 
