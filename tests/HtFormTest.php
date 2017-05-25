@@ -227,7 +227,7 @@ Outputs:
 /*
 ### Changing Form Attributes
 
-By default, the form is rendered with the following default attributes:
+By default, the form is rendered with the following attributes:
 
 - method: GET
 - action: ?
@@ -259,7 +259,9 @@ Outputs:
     }
 
 /*
-### Prepopulate form with data
+### Populate form with data
+
+You have to call the `context` method on the form object and pass an associative array to it:
 
 #mdx:Populate
 
