@@ -261,7 +261,8 @@ Outputs:
 /*
 ### Populate form with data
 
-You have to call the `context` method on the form object and pass an associative array to it:
+In order to populate the form with data you have to call the `context` method on the form object and pass an associative array to it.
+The keys of the associative array must match the names of the fields you added to the form:
 
 #mdx:Populate
 
@@ -292,6 +293,8 @@ Outputs:
 
 /*
 ### Processing form submission
+Processing a form is all about populating the form with data sent over a request and calling the `process` method
+in case there is a flag indicating that the form has been sent. Check out the following example:
 
 #mdx:ProcessWithoutError
 
@@ -314,9 +317,10 @@ Outputs:
         $form->textin('email')->label('Email');
         $form->button('_submit','Submit');
 
+        // Populate form with data sent from request
         $form->context($_REQUEST);
 
-        // Use "value" method to extract value of a field
+        // Use the "value" method to extract value of a field
         if($form->value('_submit')){
 
             // Extract all fields, except those prefixed with underscore
