@@ -31,14 +31,14 @@ Outputs:
 
 ```html
 
-<form id="form_592a1c627b7e0" action="?">
- <div class="widget field_592a1c628652c" style="display:block">
-   <input id="field_592a1c628652c" name="email" value="" />
+<form id="form_592b575fcaae8" action="?">
+ <div class="widget field_592b575fcb0f1" style="display:block">
+   <input id="field_592b575fcb0f1" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_592a1c628945f" name="submit" style="display:block" value="field_592a1c628945f">Submit
+   <button id="field_592b575fcb290" name="submit" style="display:block" value="field_592b575fcb290">Submit
    </button>
  </div>
 </form>
@@ -69,15 +69,15 @@ Outputs:
 
 ```html
 
-<form id="form_592a1c62920c4" action="?">
- <div class="widget field_592a1c629215a" style="display:block">
-   <label style="display:block" for="field_592a1c629215a">E-mail: </label>
-   <input id="field_592a1c629215a" name="email" value="" />
+<form id="form_592b575fcd0da" action="?">
+ <div class="widget field_592b575fcd16b" style="display:block">
+   <label style="display:block" for="field_592b575fcd16b">E-mail: </label>
+   <input id="field_592b575fcd16b" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_592a1c629221a" name="submit" style="display:block" value="field_592a1c629221a">Submit
+   <button id="field_592b575fcd209" name="submit" style="display:block" value="field_592b575fcd209">Submit
    </button>
  </div>
 </form>
@@ -104,15 +104,15 @@ Outputs:
 
 ```html
 
-<form id="form_592a1c62929d0" action="?">
- <div class="widget field_592a1c6292a50" style="display:block">
-   <label style="display:inline-block;margin-right:10px" for="field_592a1c6292a50">E-mail:</label>
-   <input id="field_592a1c6292a50" name="email" value="" />
+<form id="form_592b575fcd99e" action="?">
+ <div class="widget field_592b575fcda25" style="display:block">
+   <label style="display:inline-block;margin-right:10px" for="field_592b575fcda25">E-mail:</label>
+   <input id="field_592b575fcda25" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_592a1c6292b14" name="submit" style="display:block" value="field_592a1c6292b14">Submit
+   <button id="field_592b575fcdac9" name="submit" style="display:block" value="field_592b575fcdac9">Submit
    </button>
  </div>
 </form>
@@ -139,14 +139,14 @@ Outputs:
 
 ```html
 
-<form id="form_592a1c629328c" action="?">
- <div class="widget field_592a1c629332f" style="display:block">
-   <input id="field_592a1c629332f" name="email" value="" />
+<form id="form_592b575fce2b0" action="?">
+ <div class="widget field_592b575fce341" style="display:block">
+   <input id="field_592b575fce341" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_592a1c62933d8" name="submit" style="display:block" value="field_592a1c62933d8">Submit
+   <button id="field_592b575fce3e3" name="submit" style="display:block" value="field_592b575fce3e3">Submit
    </button>
  </div>
 </form>
@@ -186,27 +186,27 @@ Outputs:
 ```html
 
 <form id="my_form" action="some_script.php" method="post" class="some_class">
- <div class="widget field_592a1c6293c46" style="display:block">
-   <label style="display:block" for="field_592a1c6293c46">Email:</label>
-   <input id="field_592a1c6293c46" name="email" size="50" class="email" value="" />
+ <div class="widget field_592b575fcec75" style="display:block">
+   <label style="display:block" for="field_592b575fcec75">Email:</label>
+   <input id="field_592b575fcec75" name="email" size="50" class="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_592a1c6297113" style="display:block">
-   <label style="display:block" for="field_592a1c6297113">Comment:</label>
-   <textarea id="field_592a1c6297113" name="comment" cols="50" rows="10"></textarea>
+ <div class="widget field_592b575fcee4f" style="display:block">
+   <label style="display:block" for="field_592b575fcee4f">Comment:</label>
+   <textarea id="field_592b575fcee4f" name="comment" cols="50" rows="10"></textarea>
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_592a1c62974a1" style="display:block">
-   <label style="display:block" for="field_592a1c62974a1">
-   <input id="field_592a1c62974a1" name="newsletter" type="checkbox" value="1" checked="checked" /> Receive Newsletter?</label>
+ <div class="widget field_592b575fcf0ff" style="display:block">
+   <label style="display:block" for="field_592b575fcf0ff">
+   <input id="field_592b575fcf0ff" name="newsletter" type="checkbox" value="1" checked="checked" /> Receive Newsletter?</label>
    <input type="hidden" name="newsletter_submit" value="1" />
  </div>
  <div>
-   <input id="field_592a1c629ace0" name="key" type="hidden" value="value" />
-   <div class="widget field_592a1c629b19e" style="display:block">
-     <select id="field_592a1c629b19e" name="gender">
+   <input id="field_592b575fcf4f7" name="key" type="hidden" value="value" />
+   <div class="widget field_592b575fcf7c1" style="display:block">
+     <select id="field_592b575fcf7c1" name="gender">
        <option value="0">Choose Gender:
        </option>
        <option value="M">Male
@@ -217,9 +217,9 @@ Outputs:
      <div style="color:yellow;background:red" class="error">
      </div>
    </div>
-   <button id="field_592a1c629b253" name="submit" style="display:block" value="field_592a1c629b253">Submit
+   <button id="field_592b575fcf86e" name="submit" style="display:block" value="field_592b575fcf86e">Submit
    </button>
-   <button id="field_592a1c629b312" name="Cancel" style="display:block" value="field_592a1c629b312">Cancel
+   <button id="field_592b575fcf907" name="Cancel" style="display:block" value="field_592b575fcf907">Cancel
    </button>
  </div>
 </form>
@@ -263,21 +263,21 @@ Outputs:
 
 ```html
 
-<form id="form_592a1c629c655" action="?">
- <div class="widget field_592a1c629c6ee" style="display:inline-block;vertical-align:text-top">
-   <label style="display:block" for="field_592a1c629c6ee">First Name</label>
-   <input id="field_592a1c629c6ee" name="fst_name" value="" />
+<form id="form_592b575fd0bcc" action="?">
+ <div class="widget field_592b575fd0c5b" style="display:inline-block;vertical-align:text-top">
+   <label style="display:block" for="field_592b575fd0c5b">First Name</label>
+   <input id="field_592b575fd0c5b" name="fst_name" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_592a1c629c78b" style="display:inline-block;vertical-align:text-top">
-   <label style="display:block" for="field_592a1c629c78b">Last Name</label>
-   <input id="field_592a1c629c78b" name="lst_name" value="" />
+ <div class="widget field_592b575fd0cf2" style="display:inline-block;vertical-align:text-top">
+   <label style="display:block" for="field_592b575fd0cf2">Last Name</label>
+   <input id="field_592b575fd0cf2" name="lst_name" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_592a1c629c81e" name="submit" style="display:inline-block;vertical-align:text-top" value="field_592a1c629c81e">Submit
+   <button id="field_592b575fd0d80" name="submit" style="display:inline-block;vertical-align:text-top" value="field_592b575fd0d80">Submit
    </button>
  </div>
 </form>
@@ -306,21 +306,21 @@ Outputs:
 
 ```html
 
-<form id="form_592a1c629d24f" action="?">
- <div class="widget field_592a1c629d2eb" style="display:block">
-   <label style="display:block" for="field_592a1c629d2eb">First Name</label>
-   <input id="field_592a1c629d2eb" name="fst_name" value="" readonly="readonly" />
+<form id="form_592b575fd1873" action="?">
+ <div class="widget field_592b575fd1905" style="display:block">
+   <label style="display:block" for="field_592b575fd1905">First Name</label>
+   <input id="field_592b575fd1905" name="fst_name" value="" readonly="readonly" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_592a1c629d389" style="display:block">
-   <label style="display:block" for="field_592a1c629d389">Last Name</label>
-   <input id="field_592a1c629d389" name="lst_name" value="" readonly="readonly" />
+ <div class="widget field_592b575fd199d" style="display:block">
+   <label style="display:block" for="field_592b575fd199d">Last Name</label>
+   <input id="field_592b575fd199d" name="lst_name" value="" readonly="readonly" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_592a1c629d41b" name="submit" style="display:block" value="field_592a1c629d41b">Submit
+   <button id="field_592b575fd1a2d" name="submit" style="display:block" value="field_592b575fd1a2d">Submit
    </button>
  </div>
 </form>
@@ -358,13 +358,13 @@ Outputs:
 ```html
 
 <form action="some_script.php" method="post" class="some_class">
- <div class="widget field_592a1c629dedc" style="display:block">
-   <input id="field_592a1c629dedc" name="email" value="" />
+ <div class="widget field_592b575fd2519" style="display:block">
+   <input id="field_592b575fd2519" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_592a1c629df79" name="submit" style="display:block" value="field_592a1c629df79">Submit
+   <button id="field_592b575fd25b1" name="submit" style="display:block" value="field_592b575fd25b1">Submit
    </button>
  </div>
 </form>
@@ -400,21 +400,21 @@ Outputs:
 
 ```html
 
-<form id="form_592a1c629e70c" action="?">
- <div class="widget field_592a1c629e79f" style="display:block">
-   <label style="display:block" for="field_592a1c629e79f">Name</label>
-   <input id="field_592a1c629e79f" name="name" value="Mary" />
+<form id="form_592b575fd2d63" action="?">
+ <div class="widget field_592b575fd2ddf" style="display:block">
+   <label style="display:block" for="field_592b575fd2ddf">Name</label>
+   <input id="field_592b575fd2ddf" name="name" value="Mary" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_592a1c629e83e" style="display:block">
-   <label style="display:block" for="field_592a1c629e83e">Email</label>
-   <input id="field_592a1c629e83e" name="email" value="dontmaryme@doman.com" />
+ <div class="widget field_592b575fd2e75" style="display:block">
+   <label style="display:block" for="field_592b575fd2e75">Email</label>
+   <input id="field_592b575fd2e75" name="email" value="dontmaryme@doman.com" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_592a1c629e8cc" style="display:block">
-   <select id="field_592a1c629e8cc" name="job">
+ <div class="widget field_592b575fd2f06" style="display:block">
+   <select id="field_592b575fd2f06" name="job">
      <option value="0">Job:
      </option>
      <option value="1" selected="selected">Secretary
@@ -428,7 +428,7 @@ Outputs:
    </div>
  </div>
  <div>
-   <button id="field_592a1c629e965" name="submit" style="display:block" value="field_592a1c629e965">Submit
+   <button id="field_592b575fd2fa0" name="submit" style="display:block" value="field_592b575fd2fa0">Submit
    </button>
  </div>
 </form>
@@ -465,9 +465,10 @@ if($form->value('_submit')){
     // Extract all fields, except those prefixed with underscore
     $result = $form->process();
 
+    print_r($result);
+
 }
 
-print_r($result);
 ```
 
 Outputs:
@@ -518,10 +519,9 @@ if($form->value('_submit')){
 
     // Extract all fields, except those prefixed with underscore
     $result = $form->process();
-
+    print_r($result);
 }
 
-print_r($result);
 ```
 
 Outputs:
@@ -581,9 +581,10 @@ if($form->value('_submit')){
     // Extract all fields, except those prefixed with underscore
     $result = $form->process();
 
+    print_r($result);
+
 }
 
-print_r($result);
 ```
 
 Outputs:
@@ -632,9 +633,9 @@ $form->context($_REQUEST);
 
 if($form->value('_submit')){
     $result = $form->process()->unfold();
+    print_r($result);
 }
 
-print_r($result);
 ```
 
 Outputs:
