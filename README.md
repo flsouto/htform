@@ -31,14 +31,14 @@ Outputs:
 
 ```html
 
-<form id="form_5921f5a068b82" action="?">
- <div class="widget field_5921f5a06919e" style="display:block">
-   <input id="field_5921f5a06919e" name="email" value="" />
+<form id="form_592b575fcaae8" action="?">
+ <div class="widget field_592b575fcb0f1" style="display:block">
+   <input id="field_592b575fcb0f1" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5921f5a069335" name="submit" style="display:block" value="field_5921f5a069335">Submit
+   <button id="field_592b575fcb290" name="submit" style="display:block" value="field_592b575fcb290">Submit
    </button>
  </div>
 </form>
@@ -50,6 +50,8 @@ That is pretty easy, huh?
 
 
 ### Adding labels to fields
+
+By default fields don't have a label but you can add one by calling the `label` setter on a field instance:
 
 ```php
 <?php
@@ -67,15 +69,15 @@ Outputs:
 
 ```html
 
-<form id="form_5921f5a06b024" action="?">
- <div class="widget field_5921f5a06b0b5" style="display:block">
-   <label style="display:block" for="field_5921f5a06b0b5">E-mail: </label>
-   <input id="field_5921f5a06b0b5" name="email" value="" />
+<form id="form_592b575fcd0da" action="?">
+ <div class="widget field_592b575fcd16b" style="display:block">
+   <label style="display:block" for="field_592b575fcd16b">E-mail: </label>
+   <input id="field_592b575fcd16b" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5921f5a06b153" name="submit" style="display:block" value="field_5921f5a06b153">Submit
+   <button id="field_592b575fcd209" name="submit" style="display:block" value="field_592b575fcd209">Submit
    </button>
  </div>
 </form>
@@ -83,6 +85,8 @@ Outputs:
 ```
 
 ### Making field labels inline
+
+By default a field's label is a block level element. You can change that by passing the `inline => true` flag:
 
 ```php
 <?php
@@ -100,15 +104,15 @@ Outputs:
 
 ```html
 
-<form id="form_5921f5a06b987" action="?">
- <div class="widget field_5921f5a06ba1a" style="display:block">
-   <label style="display:inline-block;margin-right:10px" for="field_5921f5a06ba1a">E-mail:</label>
-   <input id="field_5921f5a06ba1a" name="email" value="" />
+<form id="form_592b575fcd99e" action="?">
+ <div class="widget field_592b575fcda25" style="display:block">
+   <label style="display:inline-block;margin-right:10px" for="field_592b575fcda25">E-mail:</label>
+   <input id="field_592b575fcda25" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5921f5a06babf" name="submit" style="display:block" value="field_5921f5a06babf">Submit
+   <button id="field_592b575fcdac9" name="submit" style="display:block" value="field_592b575fcdac9">Submit
    </button>
  </div>
 </form>
@@ -116,6 +120,8 @@ Outputs:
 ```
 
 ### Defining Placeholders
+
+Use can use the `placeholder` setter which is really just a shortcut for setting the field's 'placeholder' attribute:
 
 ```php
 <?php
@@ -133,57 +139,26 @@ Outputs:
 
 ```html
 
-<form id="form_5921f5a06c2f4" action="?">
- <div class="widget field_5921f5a06c385" style="display:block">
-   <input id="field_5921f5a06c385" name="email" value="" />
+<form id="form_592b575fce2b0" action="?">
+ <div class="widget field_592b575fce341" style="display:block">
+   <input id="field_592b575fce341" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5921f5a06c42d" name="submit" style="display:block" value="field_5921f5a06c42d">Submit
+   <button id="field_592b575fce3e3" name="submit" style="display:block" value="field_592b575fce3e3">Submit
    </button>
  </div>
 </form>
 
 ```
 
-### Specifying Form Attributes
+Other attributes can be set by passing an associative array to the field's `attrs` method.
 
-```php
-<?php
-require 'vendor/autoload.php';
-use FlSouto\HtForm;
-
-$form = new HtForm();
-$form->method('POST')
-     ->action('some_script.php')
-     ->attrs(['class'=>'some_class','id'=>'my_form']);
-
-$form->textin('email');
-$form->button('Submit');
-
-echo $form;
-```
-
-Outputs:
-
-```html
-
-<form id="my_form" action="some_script.php" method="post" class="some_class">
- <div class="widget field_5921f5a06cbaa" style="display:block">
-   <input id="field_5921f5a06cbaa" name="email" value="" />
-   <div style="color:yellow;background:red" class="error">
-   </div>
- </div>
- <div>
-   <button id="field_5921f5a06cc6d" name="submit" style="display:block" value="field_5921f5a06cc6d">Submit
-   </button>
- </div>
-</form>
-
-```
 
 ### Adding different types of fields
+
+A form is all about attaching a bunch of fields for taking user input. Different field types are available in this library:
 
 ```php
 <?php
@@ -210,28 +185,28 @@ Outputs:
 
 ```html
 
-<form action="some_script.php" method="post" class="some_class">
- <div class="widget field_5921f5a06d498" style="display:block">
-   <label style="display:block" for="field_5921f5a06d498">Email:</label>
-   <input id="field_5921f5a06d498" name="email" size="50" class="email" value="" />
+<form id="my_form" action="some_script.php" method="post" class="some_class">
+ <div class="widget field_592b575fcec75" style="display:block">
+   <label style="display:block" for="field_592b575fcec75">Email:</label>
+   <input id="field_592b575fcec75" name="email" size="50" class="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5921f5a06d67d" style="display:block">
-   <label style="display:block" for="field_5921f5a06d67d">Comment:</label>
-   <textarea id="field_5921f5a06d67d" name="comment" cols="50" rows="10"></textarea>
+ <div class="widget field_592b575fcee4f" style="display:block">
+   <label style="display:block" for="field_592b575fcee4f">Comment:</label>
+   <textarea id="field_592b575fcee4f" name="comment" cols="50" rows="10"></textarea>
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5921f5a06d8e1" style="display:block">
-   <label style="display:block" for="field_5921f5a06d8e1">
-   <input id="field_5921f5a06d8e1" name="newsletter" type="checkbox" value="1" checked="checked" /> Receive Newsletter?</label>
+ <div class="widget field_592b575fcf0ff" style="display:block">
+   <label style="display:block" for="field_592b575fcf0ff">
+   <input id="field_592b575fcf0ff" name="newsletter" type="checkbox" value="1" checked="checked" /> Receive Newsletter?</label>
    <input type="hidden" name="newsletter_submit" value="1" />
  </div>
  <div>
-   <input id="field_5921f5a06dd1f" name="key" type="hidden" value="value" />
-   <div class="widget field_5921f5a06dffe" style="display:block">
-     <select id="field_5921f5a06dffe" name="gender">
+   <input id="field_592b575fcf4f7" name="key" type="hidden" value="value" />
+   <div class="widget field_592b575fcf7c1" style="display:block">
+     <select id="field_592b575fcf7c1" name="gender">
        <option value="0">Choose Gender:
        </option>
        <option value="M">Male
@@ -242,16 +217,33 @@ Outputs:
      <div style="color:yellow;background:red" class="error">
      </div>
    </div>
-   <button id="field_5921f5a06e0b3" name="submit" style="display:block" value="field_5921f5a06e0b3">Submit
+   <button id="field_592b575fcf86e" name="submit" style="display:block" value="field_592b575fcf86e">Submit
    </button>
-   <button id="field_5921f5a06e150" name="Cancel" style="display:block" value="field_5921f5a06e150">Cancel
+   <button id="field_592b575fcf907" name="Cancel" style="display:block" value="field_592b575fcf907">Cancel
    </button>
  </div>
 </form>
 
 ```
 
+Each field type is defined in its own class. These classes have a repostory of its own too.
+For more info on the fields API, take a look in the following repositories:
+
+- [HtField](http://github.com/flsouto/htfield) - Abstract base class for all fields
+    - [HtButton](http://github.com/flsouto/htbutton) - Non-widget field
+    - [HtHidden](http://github.com/flsouto/hthidden) - Non-widget field
+
+- [HtWidget](http://github.com/flsouto/htwidget) - Base class for all widget types (extends HtField)
+    - [HtTextin](http://github.com/flsouto/httextin) - Widget for single-line text input
+    - [HtTextar](http://github.com/flsouto/httextar) - Widget for multi-line text input
+    - [HtCheckb](http://github.com/flsouto/htcheckb) - Widget for boolean input (checkbox)
+    - [HtSelect](http://github.com/flsouto/htselect) - Widget for choosing an option from a list
+
+
 ### Make all fields inline at once
+
+Sometimes you need to build "quick search" type of forms in which all fields are rendered
+in a single line. For this you can use the `inline` method on the form instance:
 
 ```php
 <?php
@@ -271,21 +263,21 @@ Outputs:
 
 ```html
 
-<form id="form_5921f5a06f3b7" action="?">
- <div class="widget field_5921f5a06f447" style="display:inline-block;vertical-align:text-top">
-   <label style="display:block" for="field_5921f5a06f447">First Name</label>
-   <input id="field_5921f5a06f447" name="fst_name" value="" />
+<form id="form_592b575fd0bcc" action="?">
+ <div class="widget field_592b575fd0c5b" style="display:inline-block;vertical-align:text-top">
+   <label style="display:block" for="field_592b575fd0c5b">First Name</label>
+   <input id="field_592b575fd0c5b" name="fst_name" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5921f5a06f4e3" style="display:inline-block;vertical-align:text-top">
-   <label style="display:block" for="field_5921f5a06f4e3">Last Name</label>
-   <input id="field_5921f5a06f4e3" name="lst_name" value="" />
+ <div class="widget field_592b575fd0cf2" style="display:inline-block;vertical-align:text-top">
+   <label style="display:block" for="field_592b575fd0cf2">Last Name</label>
+   <input id="field_592b575fd0cf2" name="lst_name" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5921f5a06f576" name="submit" style="display:inline-block;vertical-align:text-top" value="field_5921f5a06f576">Submit
+   <button id="field_592b575fd0d80" name="submit" style="display:inline-block;vertical-align:text-top" value="field_592b575fd0d80">Submit
    </button>
  </div>
 </form>
@@ -293,6 +285,8 @@ Outputs:
 ```
 
 ### Make all fields readonly at once
+Sometimes you want to reuse the same form layout/structure but in readonly mode. In this case
+you can call the `readonly` method of the form object in order to disable editing on all fields:
 
 ```php
 <?php
@@ -312,28 +306,75 @@ Outputs:
 
 ```html
 
-<form id="form_5921f5a070b61" action="?">
- <div class="widget field_5921f5a070bf6" style="display:block">
-   <label style="display:block" for="field_5921f5a070bf6">First Name</label>
-   <input id="field_5921f5a070bf6" name="fst_name" value="" readonly="readonly" />
+<form id="form_592b575fd1873" action="?">
+ <div class="widget field_592b575fd1905" style="display:block">
+   <label style="display:block" for="field_592b575fd1905">First Name</label>
+   <input id="field_592b575fd1905" name="fst_name" value="" readonly="readonly" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5921f5a070c91" style="display:block">
-   <label style="display:block" for="field_5921f5a070c91">Last Name</label>
-   <input id="field_5921f5a070c91" name="lst_name" value="" readonly="readonly" />
+ <div class="widget field_592b575fd199d" style="display:block">
+   <label style="display:block" for="field_592b575fd199d">Last Name</label>
+   <input id="field_592b575fd199d" name="lst_name" value="" readonly="readonly" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5921f5a070d25" name="submit" style="display:block" value="field_5921f5a070d25">Submit
+   <button id="field_592b575fd1a2d" name="submit" style="display:block" value="field_592b575fd1a2d">Submit
    </button>
  </div>
 </form>
 
 ```
 
-### Prepopulate form with data
+### Changing Form Attributes
+
+By default, the form is rendered with the following attributes:
+
+- method: GET
+- action: ?
+- id: random id
+
+But these can be changed easily by calling the corresponding setters on the form instance:
+
+```php
+<?php
+require 'vendor/autoload.php';
+use FlSouto\HtForm;
+
+$form = new HtForm();
+$form->method('POST')
+    ->action('some_script.php')
+    ->attrs(['class'=>'some_class','id'=>'my_form']);
+
+$form->textin('email');
+$form->button('Submit');
+
+echo $form;
+```
+
+Outputs:
+
+```html
+
+<form action="some_script.php" method="post" class="some_class">
+ <div class="widget field_592b575fd2519" style="display:block">
+   <input id="field_592b575fd2519" name="email" value="" />
+   <div style="color:yellow;background:red" class="error">
+   </div>
+ </div>
+ <div>
+   <button id="field_592b575fd25b1" name="submit" style="display:block" value="field_592b575fd25b1">Submit
+   </button>
+ </div>
+</form>
+
+```
+
+### Populate form with data
+
+In order to populate the form with data you have to call the `context` method on the form object and pass an associative array to it.
+The keys of the associative array must match the names of the fields you added to the form:
 
 ```php
 <?php
@@ -359,21 +400,21 @@ Outputs:
 
 ```html
 
-<form id="form_5921f5a071732" action="?">
- <div class="widget field_5921f5a0717b9" style="display:block">
-   <label style="display:block" for="field_5921f5a0717b9">Name</label>
-   <input id="field_5921f5a0717b9" name="name" value="Mary" />
+<form id="form_592b575fd2d63" action="?">
+ <div class="widget field_592b575fd2ddf" style="display:block">
+   <label style="display:block" for="field_592b575fd2ddf">Name</label>
+   <input id="field_592b575fd2ddf" name="name" value="Mary" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5921f5a071857" style="display:block">
-   <label style="display:block" for="field_5921f5a071857">Email</label>
-   <input id="field_5921f5a071857" name="email" value="dontmaryme@doman.com" />
+ <div class="widget field_592b575fd2e75" style="display:block">
+   <label style="display:block" for="field_592b575fd2e75">Email</label>
+   <input id="field_592b575fd2e75" name="email" value="dontmaryme@doman.com" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5921f5a0718e7" style="display:block">
-   <select id="field_5921f5a0718e7" name="job">
+ <div class="widget field_592b575fd2f06" style="display:block">
+   <select id="field_592b575fd2f06" name="job">
      <option value="0">Job:
      </option>
      <option value="1" selected="selected">Secretary
@@ -387,7 +428,7 @@ Outputs:
    </div>
  </div>
  <div>
-   <button id="field_5921f5a071986" name="submit" style="display:block" value="field_5921f5a071986">Submit
+   <button id="field_592b575fd2fa0" name="submit" style="display:block" value="field_592b575fd2fa0">Submit
    </button>
  </div>
 </form>
@@ -395,6 +436,8 @@ Outputs:
 ```
 
 ### Processing form submission
+Processing a form is all about populating the form with data sent over a request and calling the `process` method
+in case there is a flag indicating that the form has been sent. Check out the following example:
 
 ```php
 <?php
@@ -413,17 +456,19 @@ $form->textin('name')->label('Name');
 $form->textin('email')->label('Email');
 $form->button('_submit','Submit');
 
+// Populate form with data sent from request
 $form->context($_REQUEST);
 
-// Use "value" method to extract value of a field
+// Use the "value" method to extract value of a field
 if($form->value('_submit')){
 
     // Extract all fields, except those prefixed with underscore
     $result = $form->process();
 
+    print_r($result);
+
 }
 
-print_r($result);
 ```
 
 Outputs:
@@ -474,10 +519,9 @@ if($form->value('_submit')){
 
     // Extract all fields, except those prefixed with underscore
     $result = $form->process();
-
+    print_r($result);
 }
 
-print_r($result);
 ```
 
 Outputs:
@@ -537,9 +581,10 @@ if($form->value('_submit')){
     // Extract all fields, except those prefixed with underscore
     $result = $form->process();
 
+    print_r($result);
+
 }
 
-print_r($result);
 ```
 
 Outputs:
@@ -588,9 +633,9 @@ $form->context($_REQUEST);
 
 if($form->value('_submit')){
     $result = $form->process()->unfold();
+    print_r($result);
 }
 
-print_r($result);
 ```
 
 Outputs:

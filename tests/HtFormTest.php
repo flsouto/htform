@@ -326,8 +326,10 @@ Outputs:
             // Extract all fields, except those prefixed with underscore
             $result = $form->process();
 
+            #mdx:o print_r($result)
+
         }
-        #/mdx print_r($result)
+        #/mdx
         $this->assertArraySubset($result->data, $_REQUEST);
 
     }
@@ -369,9 +371,9 @@ Outputs:
 
             // Extract all fields, except those prefixed with underscore
             $result = $form->process();
-
+            #mdx:o print_r($result)
         }
-        #/mdx print_r($result)
+        #/mdx
         $this->assertNotEmpty($result->errors['name']);
         $this->assertNotEmpty($result->errors['email']);
 
@@ -419,8 +421,10 @@ Outputs:
 
             $result = $form->process();
 
+            #mdx:o print_r($result)
+
         }
-        #/mdx print_r($result)
+        #/mdx
         $this->assertEquals('Mary', $result->data['user[name]']);
         $this->assertEquals('Email is required!', $result->errors['user[email]']);
 
@@ -455,8 +459,9 @@ Outputs:
 
         if($form->value('_submit')){
             $result = $form->process()->unfold();
+            #mdx:o print_r($result)
         }
-        #/mdx print_r($result)
+        #/mdx
         $this->assertEquals('Mary', $result->data['user']['name']);
         $this->assertEquals('Email is required!', $result->errors['user']['email']);
     }
