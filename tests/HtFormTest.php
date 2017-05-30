@@ -293,8 +293,8 @@ Outputs:
 
 /*
 ### Processing form submission
-Processing a form is all about populating the form with data sent over a request and calling the `process` method
-in case there is a flag indicating that the form has been sent. Check out the following example:
+Processing a form is all about populating it with incoming data and calling the `process` method.
+It is also good practice to check if a flag is present indicating that the form has been sent. Check this out:
 
 #mdx:ProcessWithoutError
 
@@ -320,7 +320,7 @@ Outputs:
         // Populate form with data sent from request
         $form->context($_REQUEST);
 
-        // Use the "value" method to extract value of a field
+        // Check if there is a flag
         if($form->value('_submit')){
 
             // Extract all fields, except those prefixed with underscore
@@ -334,6 +334,9 @@ Outputs:
 
 /*
 ### Validate form submission
+You can add validation rules to be checked upon form submission. Validation rules are added on a per-field basis
+and yield error messages when something is wrong. These errors are available in the result object returned
+by the process method. Take a look at this:
 
 #mdx:ProcessWithError
 
@@ -361,7 +364,7 @@ Outputs:
 
         $form->context($_REQUEST);
 
-        // Use "value" method to extract value of a field
+        // Check if there is a flag
         if($form->value('_submit')){
 
             // Extract all fields, except those prefixed with underscore
@@ -412,10 +415,8 @@ Outputs:
 
         $form->context($_REQUEST);
 
-        // Use "value" method to extract value of a field
         if($form->value('_submit')){
 
-            // Extract all fields, except those prefixed with underscore
             $result = $form->process();
 
         }
