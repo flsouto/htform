@@ -369,7 +369,7 @@ Outputs:
         // Check if there is a flag
         if($form->value('_submit')){
 
-            // Extract all fields, except those prefixed with underscore
+            // Extract data and check for errors
             $result = $form->process();
             #mdx:o print_r($result)
         }
