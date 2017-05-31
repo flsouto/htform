@@ -338,7 +338,7 @@ Outputs:
 ### Validate form submission
 You can add validation rules to be checked upon form submission. Validation rules are added on a per-field basis
 and yield error messages when something is wrong. These errors are available in the result object returned
-by the process method. Take a look at this:
+by the process method. Take a look:
 
 #mdx:ProcessWithError
 
@@ -366,7 +366,6 @@ Outputs:
 
         $form->context($_REQUEST);
 
-        // Check if there is a flag
         if($form->value('_submit')){
 
             // Extract data and check for errors
@@ -384,7 +383,7 @@ Outputs:
 
 /*
 ### Namespacing form fields
-
+The data structure behind your form doesn't have to be flat. You can group fields into logical sections, see example below:
 #mdx:Namespacing
 
 Outputs:
@@ -396,15 +395,15 @@ Outputs:
         #mdx:Namespacing
         // The data is sent by the form in the following structure:
         $_REQUEST = [
-            'user' => [
+            'user' => [ // these fields are in the "user" section
                 'name' => 'Mary',
                 'email' => '' // this should result in an error
             ],
-            'person' => [
+            'person' => [ // these fields are in the "person" section
                 'number' => 666,
                 'city' => 'Nowhereland'
             ],
-            '_submit' => 1 // this field is in the "root"
+            '_submit' => 1 // this field is in the "root" section
         ];
 
         $form = new HtForm();
@@ -432,6 +431,10 @@ Outputs:
 
 /*
 ### Unfold form data
+
+As you may have seen in the last example, even though we can process complex data structures sent over a request,
+the data is extracted in a flat format. Luckily, the result object provides a method called `unfold` which can be used to reconstruct
+the data into a multidimensional array:
 
 #mdx:Unfold
 
