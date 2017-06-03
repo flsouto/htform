@@ -31,14 +31,14 @@ Outputs:
 
 ```html
 
-<form id="form_592b575fcaae8" action="?">
- <div class="widget field_592b575fcb0f1" style="display:block">
-   <input id="field_592b575fcb0f1" name="email" value="" />
+<form id="form_59333413a62b0" action="?">
+ <div class="widget field_59333413c9322" style="display:block">
+   <input id="field_59333413c9322" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_592b575fcb290" name="submit" style="display:block" value="field_592b575fcb290">Submit
+   <button id="field_59333413d18b0" name="submit" style="display:block" value="field_59333413d18b0">Submit
    </button>
  </div>
 </form>
@@ -69,15 +69,15 @@ Outputs:
 
 ```html
 
-<form id="form_592b575fcd0da" action="?">
- <div class="widget field_592b575fcd16b" style="display:block">
-   <label style="display:block" for="field_592b575fcd16b">E-mail: </label>
-   <input id="field_592b575fcd16b" name="email" value="" />
+<form id="form_59333413efe25" action="?">
+ <div class="widget field_59333413efebe" style="display:block">
+   <label style="display:block" for="field_59333413efebe">E-mail: </label>
+   <input id="field_59333413efebe" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_592b575fcd209" name="submit" style="display:block" value="field_592b575fcd209">Submit
+   <button id="field_59333413eff64" name="submit" style="display:block" value="field_59333413eff64">Submit
    </button>
  </div>
 </form>
@@ -104,15 +104,15 @@ Outputs:
 
 ```html
 
-<form id="form_592b575fcd99e" action="?">
- <div class="widget field_592b575fcda25" style="display:block">
-   <label style="display:inline-block;margin-right:10px" for="field_592b575fcda25">E-mail:</label>
-   <input id="field_592b575fcda25" name="email" value="" />
+<form id="form_59333413f0738" action="?">
+ <div class="widget field_59333413f07cd" style="display:block">
+   <label style="display:inline-block;margin-right:10px" for="field_59333413f07cd">E-mail:</label>
+   <input id="field_59333413f07cd" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_592b575fcdac9" name="submit" style="display:block" value="field_592b575fcdac9">Submit
+   <button id="field_59333413f0873" name="submit" style="display:block" value="field_59333413f0873">Submit
    </button>
  </div>
 </form>
@@ -139,14 +139,14 @@ Outputs:
 
 ```html
 
-<form id="form_592b575fce2b0" action="?">
- <div class="widget field_592b575fce341" style="display:block">
-   <input id="field_592b575fce341" name="email" value="" />
+<form id="form_59333413f100b" action="?">
+ <div class="widget field_59333413f10a1" style="display:block">
+   <input id="field_59333413f10a1" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_592b575fce3e3" name="submit" style="display:block" value="field_592b575fce3e3">Submit
+   <button id="field_59333413f1141" name="submit" style="display:block" value="field_59333413f1141">Submit
    </button>
  </div>
 </form>
@@ -186,27 +186,27 @@ Outputs:
 ```html
 
 <form id="my_form" action="some_script.php" method="post" class="some_class">
- <div class="widget field_592b575fcec75" style="display:block">
-   <label style="display:block" for="field_592b575fcec75">Email:</label>
-   <input id="field_592b575fcec75" name="email" size="50" class="email" value="" />
+ <div class="widget field_59333413f1964" style="display:block">
+   <label style="display:block" for="field_59333413f1964">Email:</label>
+   <input id="field_59333413f1964" name="email" size="50" class="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_592b575fcee4f" style="display:block">
-   <label style="display:block" for="field_592b575fcee4f">Comment:</label>
-   <textarea id="field_592b575fcee4f" name="comment" cols="50" rows="10"></textarea>
+ <div class="widget field_593334140627d" style="display:block">
+   <label style="display:block" for="field_593334140627d">Comment:</label>
+   <textarea id="field_593334140627d" name="comment" cols="50" rows="10"></textarea>
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_592b575fcf0ff" style="display:block">
-   <label style="display:block" for="field_592b575fcf0ff">
-   <input id="field_592b575fcf0ff" name="newsletter" type="checkbox" value="1" checked="checked" /> Receive Newsletter?</label>
+ <div class="widget field_593334140e548" style="display:block">
+   <label style="display:block" for="field_593334140e548">
+   <input id="field_593334140e548" name="newsletter" type="checkbox" value="1" checked="checked" /> Receive Newsletter?</label>
    <input type="hidden" name="newsletter_submit" value="1" />
  </div>
  <div>
-   <input id="field_592b575fcf4f7" name="key" type="hidden" value="value" />
-   <div class="widget field_592b575fcf7c1" style="display:block">
-     <select id="field_592b575fcf7c1" name="gender">
+   <input id="field_59333414222ac" name="key" type="hidden" value="value" />
+   <div class="widget field_5933341434196" style="display:block">
+     <select id="field_5933341434196" name="gender">
        <option value="0">Choose Gender:
        </option>
        <option value="M">Male
@@ -217,9 +217,9 @@ Outputs:
      <div style="color:yellow;background:red" class="error">
      </div>
    </div>
-   <button id="field_592b575fcf86e" name="submit" style="display:block" value="field_592b575fcf86e">Submit
+   <button id="field_593334143423c" name="submit" style="display:block" value="field_593334143423c">Submit
    </button>
-   <button id="field_592b575fcf907" name="Cancel" style="display:block" value="field_592b575fcf907">Cancel
+   <button id="field_59333414342c5" name="Cancel" style="display:block" value="field_59333414342c5">Cancel
    </button>
  </div>
 </form>
@@ -263,21 +263,21 @@ Outputs:
 
 ```html
 
-<form id="form_592b575fd0bcc" action="?">
- <div class="widget field_592b575fd0c5b" style="display:inline-block;vertical-align:text-top">
-   <label style="display:block" for="field_592b575fd0c5b">First Name</label>
-   <input id="field_592b575fd0c5b" name="fst_name" value="" />
+<form id="form_5933341435567" action="?">
+ <div class="widget field_59333414355fd" style="display:inline-block;vertical-align:text-top">
+   <label style="display:block" for="field_59333414355fd">First Name</label>
+   <input id="field_59333414355fd" name="fst_name" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_592b575fd0cf2" style="display:inline-block;vertical-align:text-top">
-   <label style="display:block" for="field_592b575fd0cf2">Last Name</label>
-   <input id="field_592b575fd0cf2" name="lst_name" value="" />
+ <div class="widget field_593334143569b" style="display:inline-block;vertical-align:text-top">
+   <label style="display:block" for="field_593334143569b">Last Name</label>
+   <input id="field_593334143569b" name="lst_name" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_592b575fd0d80" name="submit" style="display:inline-block;vertical-align:text-top" value="field_592b575fd0d80">Submit
+   <button id="field_5933341435732" name="submit" style="display:inline-block;vertical-align:text-top" value="field_5933341435732">Submit
    </button>
  </div>
 </form>
@@ -306,21 +306,21 @@ Outputs:
 
 ```html
 
-<form id="form_592b575fd1873" action="?">
- <div class="widget field_592b575fd1905" style="display:block">
-   <label style="display:block" for="field_592b575fd1905">First Name</label>
-   <input id="field_592b575fd1905" name="fst_name" value="" readonly="readonly" />
+<form id="form_593334143614e" action="?">
+ <div class="widget field_59333414361e6" style="display:block">
+   <label style="display:block" for="field_59333414361e6">First Name</label>
+   <input id="field_59333414361e6" name="fst_name" value="" readonly="readonly" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_592b575fd199d" style="display:block">
-   <label style="display:block" for="field_592b575fd199d">Last Name</label>
-   <input id="field_592b575fd199d" name="lst_name" value="" readonly="readonly" />
+ <div class="widget field_5933341436284" style="display:block">
+   <label style="display:block" for="field_5933341436284">Last Name</label>
+   <input id="field_5933341436284" name="lst_name" value="" readonly="readonly" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_592b575fd1a2d" name="submit" style="display:block" value="field_592b575fd1a2d">Submit
+   <button id="field_593334143631c" name="submit" style="display:block" value="field_593334143631c">Submit
    </button>
  </div>
 </form>
@@ -358,13 +358,13 @@ Outputs:
 ```html
 
 <form action="some_script.php" method="post" class="some_class">
- <div class="widget field_592b575fd2519" style="display:block">
-   <input id="field_592b575fd2519" name="email" value="" />
+ <div class="widget field_5933341436e06" style="display:block">
+   <input id="field_5933341436e06" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_592b575fd25b1" name="submit" style="display:block" value="field_592b575fd25b1">Submit
+   <button id="field_5933341436ea4" name="submit" style="display:block" value="field_5933341436ea4">Submit
    </button>
  </div>
 </form>
@@ -400,21 +400,21 @@ Outputs:
 
 ```html
 
-<form id="form_592b575fd2d63" action="?">
- <div class="widget field_592b575fd2ddf" style="display:block">
-   <label style="display:block" for="field_592b575fd2ddf">Name</label>
-   <input id="field_592b575fd2ddf" name="name" value="Mary" />
+<form id="form_59333414375f7" action="?">
+ <div class="widget field_593334143768a" style="display:block">
+   <label style="display:block" for="field_593334143768a">Name</label>
+   <input id="field_593334143768a" name="name" value="Mary" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_592b575fd2e75" style="display:block">
-   <label style="display:block" for="field_592b575fd2e75">Email</label>
-   <input id="field_592b575fd2e75" name="email" value="dontmaryme@doman.com" />
+ <div class="widget field_593334143772a" style="display:block">
+   <label style="display:block" for="field_593334143772a">Email</label>
+   <input id="field_593334143772a" name="email" value="dontmaryme@doman.com" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_592b575fd2f06" style="display:block">
-   <select id="field_592b575fd2f06" name="job">
+ <div class="widget field_59333414377bd" style="display:block">
+   <select id="field_59333414377bd" name="job">
      <option value="0">Job:
      </option>
      <option value="1" selected="selected">Secretary
@@ -428,7 +428,7 @@ Outputs:
    </div>
  </div>
  <div>
-   <button id="field_592b575fd2fa0" name="submit" style="display:block" value="field_592b575fd2fa0">Submit
+   <button id="field_5933341437859" name="submit" style="display:block" value="field_5933341437859">Submit
    </button>
  </div>
 </form>
@@ -436,8 +436,8 @@ Outputs:
 ```
 
 ### Processing form submission
-Processing a form is all about populating the form with data sent over a request and calling the `process` method
-in case there is a flag indicating that the form has been sent. Check out the following example:
+Processing a form is all about populating it with incoming data and calling the `process` method.
+It is also good practice to check if a flag is present indicating that the form has been sent. Check this out:
 
 ```php
 <?php
@@ -459,7 +459,7 @@ $form->button('_submit','Submit');
 // Populate form with data sent from request
 $form->context($_REQUEST);
 
-// Use the "value" method to extract value of a field
+// Check if there is a flag
 if($form->value('_submit')){
 
     // Extract all fields, except those prefixed with underscore
@@ -491,6 +491,9 @@ FlSouto\HtFormResult Object
 ```
 
 ### Validate form submission
+You can add validation rules to be checked upon form submission. Validation rules are added on a per-field basis
+and yield error messages when something is wrong. These errors are available in the result object returned
+by the process method. Take a look:
 
 ```php
 <?php
@@ -514,10 +517,9 @@ $form->button('_submit','Submit');
 
 $form->context($_REQUEST);
 
-// Use "value" method to extract value of a field
 if($form->value('_submit')){
 
-    // Extract all fields, except those prefixed with underscore
+    // Extract data and check for errors
     $result = $form->process();
     print_r($result);
 }
@@ -546,7 +548,7 @@ FlSouto\HtFormResult Object
 ```
 
 ### Namespacing form fields
-
+The data structure behind your form doesn't have to be flat. You can group fields into logical sections, see example below:
 ```php
 <?php
 require 'vendor/autoload.php';
@@ -554,15 +556,15 @@ use FlSouto\HtForm;
 
 // The data is sent by the form in the following structure:
 $_REQUEST = [
-    'user' => [
+    'user' => [ // these fields are in the "user" section
         'name' => 'Mary',
         'email' => '' // this should result in an error
     ],
-    'person' => [
+    'person' => [ // these fields are in the "person" section
         'number' => 666,
         'city' => 'Nowhereland'
     ],
-    '_submit' => 1 // this field is in the "root"
+    '_submit' => 1 // this field is in the "root" section
 ];
 
 $form = new HtForm();
@@ -575,10 +577,8 @@ $form->button('_submit','Submit');
 
 $form->context($_REQUEST);
 
-// Use "value" method to extract value of a field
 if($form->value('_submit')){
 
-    // Extract all fields, except those prefixed with underscore
     $result = $form->process();
 
     print_r($result);
@@ -610,6 +610,10 @@ FlSouto\HtFormResult Object
 ```
 
 ### Unfold form data
+
+As you may have seen in the last example, even though we can process complex data structures sent over a request,
+the data is extracted in a flat format. Luckily, the result object provides a method called `unfold` which can be used to reconstruct
+the data into a multidimensional array:
 
 ```php
 <?php
