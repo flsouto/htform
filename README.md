@@ -1,5 +1,13 @@
 # HtForm
 
+## Installation
+
+To install this package use composer:
+
+```
+composer require flsouto/htform
+```
+
 ## Overview
 
 Forget about everything you've seen so far regarding form building tools and libraries. The approach you are going to see here is something totally new and straightforward: 
@@ -31,14 +39,14 @@ Outputs:
 
 ```html
 
-<form id="form_59333413a62b0" action="?">
- <div class="widget field_59333413c9322" style="display:block">
-   <input id="field_59333413c9322" name="email" value="" />
+<form id="form_5933365fa69ae" action="?">
+ <div class="widget field_5933365fa6fcb" style="display:block">
+   <input id="field_5933365fa6fcb" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_59333413d18b0" name="submit" style="display:block" value="field_59333413d18b0">Submit
+   <button id="field_5933365fa7173" name="submit" style="display:block" value="field_5933365fa7173">Submit
    </button>
  </div>
 </form>
@@ -69,15 +77,15 @@ Outputs:
 
 ```html
 
-<form id="form_59333413efe25" action="?">
- <div class="widget field_59333413efebe" style="display:block">
-   <label style="display:block" for="field_59333413efebe">E-mail: </label>
-   <input id="field_59333413efebe" name="email" value="" />
+<form id="form_5933365fac769" action="?">
+ <div class="widget field_5933365fac802" style="display:block">
+   <label style="display:block" for="field_5933365fac802">E-mail: </label>
+   <input id="field_5933365fac802" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_59333413eff64" name="submit" style="display:block" value="field_59333413eff64">Submit
+   <button id="field_5933365fac8a3" name="submit" style="display:block" value="field_5933365fac8a3">Submit
    </button>
  </div>
 </form>
@@ -104,15 +112,15 @@ Outputs:
 
 ```html
 
-<form id="form_59333413f0738" action="?">
- <div class="widget field_59333413f07cd" style="display:block">
-   <label style="display:inline-block;margin-right:10px" for="field_59333413f07cd">E-mail:</label>
-   <input id="field_59333413f07cd" name="email" value="" />
+<form id="form_5933365fad0ae" action="?">
+ <div class="widget field_5933365fad142" style="display:block">
+   <label style="display:inline-block;margin-right:10px" for="field_5933365fad142">E-mail:</label>
+   <input id="field_5933365fad142" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_59333413f0873" name="submit" style="display:block" value="field_59333413f0873">Submit
+   <button id="field_5933365fad1e9" name="submit" style="display:block" value="field_5933365fad1e9">Submit
    </button>
  </div>
 </form>
@@ -121,7 +129,7 @@ Outputs:
 
 ### Defining Placeholders
 
-Use can use the `placeholder` setter which is really just a shortcut for setting the field's 'placeholder' attribute:
+You can use the `placeholder` setter which is really just a shortcut for setting the field's 'placeholder' attribute:
 
 ```php
 <?php
@@ -139,14 +147,14 @@ Outputs:
 
 ```html
 
-<form id="form_59333413f100b" action="?">
- <div class="widget field_59333413f10a1" style="display:block">
-   <input id="field_59333413f10a1" name="email" value="" />
+<form id="form_5933365fad9b5" action="?">
+ <div class="widget field_5933365fada4a" style="display:block">
+   <input id="field_5933365fada4a" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_59333413f1141" name="submit" style="display:block" value="field_59333413f1141">Submit
+   <button id="field_5933365fadaf4" name="submit" style="display:block" value="field_5933365fadaf4">Submit
    </button>
  </div>
 </form>
@@ -166,9 +174,6 @@ require 'vendor/autoload.php';
 use FlSouto\HtForm;
 
 $form = new HtForm();
-$form->method('POST')
-     ->action('some_script.php')
-     ->attrs(['class'=>'some_class','id'=>'my_form']);
 
 $form->textin('email')->label('Email:')->size(50)->attrs(['class'=>'email']);
 $form->textar('comment')->label('Comment:')->cols(50)->rows(10);
@@ -185,28 +190,28 @@ Outputs:
 
 ```html
 
-<form id="my_form" action="some_script.php" method="post" class="some_class">
- <div class="widget field_59333413f1964" style="display:block">
-   <label style="display:block" for="field_59333413f1964">Email:</label>
-   <input id="field_59333413f1964" name="email" size="50" class="email" value="" />
+<form id="form_5933365fae269" action="?">
+ <div class="widget field_5933365fae2ff" style="display:block">
+   <label style="display:block" for="field_5933365fae2ff">Email:</label>
+   <input id="field_5933365fae2ff" name="email" size="50" class="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_593334140627d" style="display:block">
-   <label style="display:block" for="field_593334140627d">Comment:</label>
-   <textarea id="field_593334140627d" name="comment" cols="50" rows="10"></textarea>
+ <div class="widget field_5933365fae4e9" style="display:block">
+   <label style="display:block" for="field_5933365fae4e9">Comment:</label>
+   <textarea id="field_5933365fae4e9" name="comment" cols="50" rows="10"></textarea>
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_593334140e548" style="display:block">
-   <label style="display:block" for="field_593334140e548">
-   <input id="field_593334140e548" name="newsletter" type="checkbox" value="1" checked="checked" /> Receive Newsletter?</label>
+ <div class="widget field_5933365fae75a" style="display:block">
+   <label style="display:block" for="field_5933365fae75a">
+   <input id="field_5933365fae75a" name="newsletter" type="checkbox" value="1" checked="checked" /> Receive Newsletter?</label>
    <input type="hidden" name="newsletter_submit" value="1" />
  </div>
  <div>
-   <input id="field_59333414222ac" name="key" type="hidden" value="value" />
-   <div class="widget field_5933341434196" style="display:block">
-     <select id="field_5933341434196" name="gender">
+   <input id="field_5933365faeb91" name="key" type="hidden" value="value" />
+   <div class="widget field_5933365faee83" style="display:block">
+     <select id="field_5933365faee83" name="gender">
        <option value="0">Choose Gender:
        </option>
        <option value="M">Male
@@ -217,9 +222,9 @@ Outputs:
      <div style="color:yellow;background:red" class="error">
      </div>
    </div>
-   <button id="field_593334143423c" name="submit" style="display:block" value="field_593334143423c">Submit
+   <button id="field_5933365faef3b" name="submit" style="display:block" value="field_5933365faef3b">Submit
    </button>
-   <button id="field_59333414342c5" name="Cancel" style="display:block" value="field_59333414342c5">Cancel
+   <button id="field_5933365faefdb" name="Cancel" style="display:block" value="field_5933365faefdb">Cancel
    </button>
  </div>
 </form>
@@ -263,21 +268,21 @@ Outputs:
 
 ```html
 
-<form id="form_5933341435567" action="?">
- <div class="widget field_59333414355fd" style="display:inline-block;vertical-align:text-top">
-   <label style="display:block" for="field_59333414355fd">First Name</label>
-   <input id="field_59333414355fd" name="fst_name" value="" />
+<form id="form_5933365fb0244" action="?">
+ <div class="widget field_5933365fb02d9" style="display:inline-block;vertical-align:text-top">
+   <label style="display:block" for="field_5933365fb02d9">First Name</label>
+   <input id="field_5933365fb02d9" name="fst_name" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_593334143569b" style="display:inline-block;vertical-align:text-top">
-   <label style="display:block" for="field_593334143569b">Last Name</label>
-   <input id="field_593334143569b" name="lst_name" value="" />
+ <div class="widget field_5933365fb0376" style="display:inline-block;vertical-align:text-top">
+   <label style="display:block" for="field_5933365fb0376">Last Name</label>
+   <input id="field_5933365fb0376" name="lst_name" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5933341435732" name="submit" style="display:inline-block;vertical-align:text-top" value="field_5933341435732">Submit
+   <button id="field_5933365fb040c" name="submit" style="display:inline-block;vertical-align:text-top" value="field_5933365fb040c">Submit
    </button>
  </div>
 </form>
@@ -306,21 +311,21 @@ Outputs:
 
 ```html
 
-<form id="form_593334143614e" action="?">
- <div class="widget field_59333414361e6" style="display:block">
-   <label style="display:block" for="field_59333414361e6">First Name</label>
-   <input id="field_59333414361e6" name="fst_name" value="" readonly="readonly" />
+<form id="form_5933365fb0e4b" action="?">
+ <div class="widget field_5933365fb0ee3" style="display:block">
+   <label style="display:block" for="field_5933365fb0ee3">First Name</label>
+   <input id="field_5933365fb0ee3" name="fst_name" value="" readonly="readonly" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5933341436284" style="display:block">
-   <label style="display:block" for="field_5933341436284">Last Name</label>
-   <input id="field_5933341436284" name="lst_name" value="" readonly="readonly" />
+ <div class="widget field_5933365fb0f81" style="display:block">
+   <label style="display:block" for="field_5933365fb0f81">Last Name</label>
+   <input id="field_5933365fb0f81" name="lst_name" value="" readonly="readonly" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_593334143631c" name="submit" style="display:block" value="field_593334143631c">Submit
+   <button id="field_5933365fb1018" name="submit" style="display:block" value="field_5933365fb1018">Submit
    </button>
  </div>
 </form>
@@ -357,14 +362,14 @@ Outputs:
 
 ```html
 
-<form action="some_script.php" method="post" class="some_class">
- <div class="widget field_5933341436e06" style="display:block">
-   <input id="field_5933341436e06" name="email" value="" />
+<form id="my_form" action="some_script.php" method="post" class="some_class">
+ <div class="widget field_5933365fb1b11" style="display:block">
+   <input id="field_5933365fb1b11" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5933341436ea4" name="submit" style="display:block" value="field_5933341436ea4">Submit
+   <button id="field_5933365fb1bb2" name="submit" style="display:block" value="field_5933365fb1bb2">Submit
    </button>
  </div>
 </form>
@@ -400,21 +405,21 @@ Outputs:
 
 ```html
 
-<form id="form_59333414375f7" action="?">
- <div class="widget field_593334143768a" style="display:block">
-   <label style="display:block" for="field_593334143768a">Name</label>
-   <input id="field_593334143768a" name="name" value="Mary" />
+<form id="form_5933365fb235c" action="?">
+ <div class="widget field_5933365fb23f0" style="display:block">
+   <label style="display:block" for="field_5933365fb23f0">Name</label>
+   <input id="field_5933365fb23f0" name="name" value="Mary" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_593334143772a" style="display:block">
-   <label style="display:block" for="field_593334143772a">Email</label>
-   <input id="field_593334143772a" name="email" value="dontmaryme@doman.com" />
+ <div class="widget field_5933365fb2490" style="display:block">
+   <label style="display:block" for="field_5933365fb2490">Email</label>
+   <input id="field_5933365fb2490" name="email" value="dontmaryme@doman.com" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_59333414377bd" style="display:block">
-   <select id="field_59333414377bd" name="job">
+ <div class="widget field_5933365fb2523" style="display:block">
+   <select id="field_5933365fb2523" name="job">
      <option value="0">Job:
      </option>
      <option value="1" selected="selected">Secretary
@@ -428,7 +433,7 @@ Outputs:
    </div>
  </div>
  <div>
-   <button id="field_5933341437859" name="submit" style="display:block" value="field_5933341437859">Submit
+   <button id="field_5933365fb25c4" name="submit" style="display:block" value="field_5933365fb25c4">Submit
    </button>
  </div>
 </form>
