@@ -9,6 +9,14 @@ use FlSouto\HtForm;
 /* 
 # HtForm
 
+## Installation
+
+To install this package use composer:
+
+```
+composer require flsouto/htform
+```
+
 ## Overview
 
 Forget about everything you've seen so far regarding form building tools and libraries. The approach you are going to see here is something totally new and straightforward: 
@@ -97,7 +105,7 @@ Outputs:
 /*
 ### Defining Placeholders
 
-Use can use the `placeholder` setter which is really just a shortcut for setting the field's 'placeholder' attribute:
+You can use the `placeholder` setter which is really just a shortcut for setting the field's 'placeholder' attribute:
 
 #mdx:FieldWithPlaceholder
 
@@ -146,9 +154,6 @@ For more info on the fields API, take a look in the following repositories:
     function testDifferentFieldTypes(){
         #mdx:DifferentFieldTypes
         $form = new HtForm();
-        $form->method('POST')
-             ->action('some_script.php')
-             ->attrs(['class'=>'some_class','id'=>'my_form']);
 
         $form->textin('email')->label('Email:')->size(50)->attrs(['class'=>'email']);
         $form->textar('comment')->label('Comment:')->cols(50)->rows(10);
