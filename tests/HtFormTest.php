@@ -6,7 +6,7 @@ require 'vendor/autoload.php';
 #mdx:h use
 use FlSouto\HtForm;
 
-/* 
+/*
 # HtForm
 
 ## Installation
@@ -19,13 +19,13 @@ composer require flsouto/htform
 
 ## Overview
 
-Forget about everything you've seen so far regarding form building tools and libraries. The approach you are going to see here is something totally new and straightforward: 
+Forget about everything you've seen so far regarding form building tools and libraries. The approach you are going to see here is something totally new and straightforward:
 
-- No need to instantiate and/or configure tons of objects. 
-- No need to define and connect the form to a model. 
+- No need to instantiate and/or configure tons of objects.
+- No need to define and connect the form to a model.
 - No need to have xml or yml files defining how the form is supposed to behave.
-- No need to define your own form and field classes. 
-- No need to setup a "renderer engine" before the form can be rendered. 
+- No need to define your own form and field classes.
+- No need to setup a "renderer engine" before the form can be rendered.
 - No need to get the form builder from a DIC (Dependency Injection Container)
 
 ## Usage
@@ -137,7 +137,7 @@ Outputs:
 
 #mdx:DifferentFieldTypes -o httidy
 
-Each field type is defined in its own class. These classes have a repostory of its own too.
+Each field type is defined in its own class. These classes have a repostory of their own too.
 For more info on the fields API, take a look in the following repositories:
 
 - [HtField](http://github.com/flsouto/htfield) - Abstract base class for all fields
@@ -149,6 +149,9 @@ For more info on the fields API, take a look in the following repositories:
     - [HtTextar](http://github.com/flsouto/httextar) - Widget for multi-line text input
     - [HtCheckb](http://github.com/flsouto/htcheckb) - Widget for boolean input (checkbox)
     - [HtSelect](http://github.com/flsouto/htselect) - Widget for choosing an option from a list
+    - [HtUpload](http://github.com/flsouto/htupload) - Widget for uploading a file
+
+Notice: when adding the "upload" field the form will automatically have enctype=multipart/form-data and method=POST
 
 */
     function testDifferentFieldTypes(){
@@ -160,6 +163,7 @@ For more info on the fields API, take a look in the following repositories:
         $form->checkb('newsletter','Receive Newsletter?')->fallback(1); // checked by default
         $form->hidden('key','value');
         $form->select('gender')->options(['M'=>'Male','F'=>'Female'])->caption('Choose Gender: ');
+        $form->upload('portfolio',__DIR__)->label('Choose a pdf file')->required('Please provide a portfolio')->accept(['application/pdf']);
         $form->button('Submit');
         $form->button('Cancel'); // more than one button can be added
         #/mdx echo $form
@@ -177,6 +181,7 @@ For more info on the fields API, take a look in the following repositories:
         $this->assertContains("Female","$form");
         $this->assertContains("Submit","$form");
         $this->assertContains("Cancel","$form");
+        $this->assertContains("Choose a pdf file","$form");
 
     }
 

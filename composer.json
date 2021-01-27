@@ -18,7 +18,8 @@
         "flsouto/httextin": "^1.0",
         "flsouto/httextar": "^1.0",
         "flsouto/htcheckb": "^1.0",
-        "flsouto/htselect": "^1.0"
+        "flsouto/htselect": "^1.0",
+        "flsouto/htupload": "^1.0"
     },
     "autoload" :{
     	"psr-0" : {

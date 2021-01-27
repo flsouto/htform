@@ -107,7 +107,7 @@ class HtForm implements \IteratorAggregate{
 		array_unshift($args, $name);
 		$refl = new \ReflectionClass($fqn_class);
 		$field = $refl->newInstanceArgs($args);
-		
+
 		if($field instanceof HtWidget){
 			$field->readonly($this->readonly);
 			$field->inline($this->inline);
@@ -116,8 +116,12 @@ class HtForm implements \IteratorAggregate{
 		}
 		$field->context($this->context);
 		$this->fields[$name] = $field;
+		if($field instanceof HtUpload){
+		    $this->attrs['enctype'] = 'multipart/form-data';
+		    $this->attrs['method'] = 'POST';
+        }
 		return $field;
-	
+
 	}
 
 	function add(HtField $field){
@@ -125,56 +129,64 @@ class HtForm implements \IteratorAggregate{
 		return $this;
 	}
 
-	/** 
+	/**
 	 * @return HtHidden
 	*/
 	function hidden($name, $value=1){
 		return $this->addField($name, 'HtHidden', [$value]);
 	}
 
-	/** 
+	/**
 	 * @return HtButton
 	*/
 	function button($name, $label=null){
 		return $this->addField($name, 'HtButton', [$label]);
 	}
 
-	/** 
+	/**
 	 * @return HtTextin
 	*/
 	function textin($name){
 		return $this->addField($name, 'HtTextin');
 	}
 
-	/** 
+	/**
 	 * @return HtTextar
 	*/
 	function textar($name){
 		return $this->addField($name, 'HtTextar');
 	}
 
-	/** 
+	/**
 	 * @return HtCheckb
 	*/
 	function checkb($name, $label=null){
 		return $this->addField($name, 'HtCheckb',[$label]);
 	}
 
-	/** 
+	/**
 	 * @return HtSelect
 	*/
 	function select($name){
 		return $this->addField($name, 'HtSelect');
 	}
 
-	/** 
+    /**
+     * @return HtUpload
+     */
+    function upload($name, $savedir){
+        return $this->addField($name, 'HtUpload', [$savedir]);
+    }
+
+
+    /**
 	 * @return HtRadios
 	*/
 	function radios($name){
 		return $this->addField($name, 'HtRadios');
 	}
 
-	/** 
+	/**
 	 * @return HtCklist
 	*/
 	function cklist($name){

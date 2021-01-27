@@ -10,13 +10,13 @@ composer require flsouto/htform
 
 ## Overview
 
-Forget about everything you've seen so far regarding form building tools and libraries. The approach you are going to see here is something totally new and straightforward: 
+Forget about everything you've seen so far regarding form building tools and libraries. The approach you are going to see here is something totally new and straightforward:
 
-- No need to instantiate and/or configure tons of objects. 
-- No need to define and connect the form to a model. 
+- No need to instantiate and/or configure tons of objects.
+- No need to define and connect the form to a model.
 - No need to have xml or yml files defining how the form is supposed to behave.
-- No need to define your own form and field classes. 
-- No need to setup a "renderer engine" before the form can be rendered. 
+- No need to define your own form and field classes.
+- No need to setup a "renderer engine" before the form can be rendered.
 - No need to get the form builder from a DIC (Dependency Injection Container)
 
 ## Usage
@@ -39,14 +39,14 @@ Outputs:
 
 ```html
 
-<form id="form_5933365fa69ae" action="?">
- <div class="widget field_5933365fa6fcb" style="display:block">
-   <input id="field_5933365fa6fcb" name="email" value="" />
+<form id="form_60116ef75c0f3" action="?">
+ <div class="widget field_60116ef75c373" style="display:block">
+   <input id="field_60116ef75c373" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5933365fa7173" name="submit" style="display:block" value="field_5933365fa7173">Submit
+   <button id="field_60116ef75c3dd" name="submit" style="display:block" value="field_60116ef75c3dd">Submit
    </button>
  </div>
 </form>
@@ -77,15 +77,15 @@ Outputs:
 
 ```html
 
-<form id="form_5933365fac769" action="?">
- <div class="widget field_5933365fac802" style="display:block">
-   <label style="display:block" for="field_5933365fac802">E-mail: </label>
-   <input id="field_5933365fac802" name="email" value="" />
+<form id="form_60116ef75d523" action="?">
+ <div class="widget field_60116ef75d52e" style="display:block">
+   <label style="display:block" for="field_60116ef75d52e">E-mail: </label>
+   <input id="field_60116ef75d52e" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5933365fac8a3" name="submit" style="display:block" value="field_5933365fac8a3">Submit
+   <button id="field_60116ef75d53b" name="submit" style="display:block" value="field_60116ef75d53b">Submit
    </button>
  </div>
 </form>
@@ -112,15 +112,15 @@ Outputs:
 
 ```html
 
-<form id="form_5933365fad0ae" action="?">
- <div class="widget field_5933365fad142" style="display:block">
-   <label style="display:inline-block;margin-right:10px" for="field_5933365fad142">E-mail:</label>
-   <input id="field_5933365fad142" name="email" value="" />
+<form id="form_60116ef75d6ae" action="?">
+ <div class="widget field_60116ef75d6b6" style="display:block">
+   <label style="display:inline-block;margin-right:10px" for="field_60116ef75d6b6">E-mail:</label>
+   <input id="field_60116ef75d6b6" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5933365fad1e9" name="submit" style="display:block" value="field_5933365fad1e9">Submit
+   <button id="field_60116ef75d6c2" name="submit" style="display:block" value="field_60116ef75d6c2">Submit
    </button>
  </div>
 </form>
@@ -147,14 +147,14 @@ Outputs:
 
 ```html
 
-<form id="form_5933365fad9b5" action="?">
- <div class="widget field_5933365fada4a" style="display:block">
-   <input id="field_5933365fada4a" name="email" value="" />
+<form id="form_60116ef75d81f" action="?">
+ <div class="widget field_60116ef75d828" style="display:block">
+   <input id="field_60116ef75d828" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5933365fadaf4" name="submit" style="display:block" value="field_5933365fadaf4">Submit
+   <button id="field_60116ef75d834" name="submit" style="display:block" value="field_60116ef75d834">Submit
    </button>
  </div>
 </form>
@@ -180,6 +180,7 @@ $form->textar('comment')->label('Comment:')->cols(50)->rows(10);
 $form->checkb('newsletter','Receive Newsletter?')->fallback(1); // checked by default
 $form->hidden('key','value');
 $form->select('gender')->options(['M'=>'Male','F'=>'Female'])->caption('Choose Gender: ');
+$form->upload('portfolio',__DIR__)->label('Choose a pdf file')->required('Please provide a portfolio')->accept(['application/pdf']);
 $form->button('Submit');
 $form->button('Cancel'); // more than one button can be added
 
@@ -190,28 +191,28 @@ Outputs:
 
 ```html
 
-<form id="form_5933365fae269" action="?">
- <div class="widget field_5933365fae2ff" style="display:block">
-   <label style="display:block" for="field_5933365fae2ff">Email:</label>
-   <input id="field_5933365fae2ff" name="email" size="50" class="email" value="" />
+<form id="form_60116ef75d988" action="?" enctype="multipart/form-data" method="post">
+ <div class="widget field_60116ef75d990" style="display:block">
+   <label style="display:block" for="field_60116ef75d990">Email:</label>
+   <input id="field_60116ef75d990" name="email" size="50" class="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5933365fae4e9" style="display:block">
-   <label style="display:block" for="field_5933365fae4e9">Comment:</label>
-   <textarea id="field_5933365fae4e9" name="comment" cols="50" rows="10"></textarea>
+ <div class="widget field_60116ef75da1d" style="display:block">
+   <label style="display:block" for="field_60116ef75da1d">Comment:</label>
+   <textarea id="field_60116ef75da1d" name="comment" cols="50" rows="10"></textarea>
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5933365fae75a" style="display:block">
-   <label style="display:block" for="field_5933365fae75a">
-   <input id="field_5933365fae75a" name="newsletter" type="checkbox" value="1" checked="checked" /> Receive Newsletter?</label>
+ <div class="widget field_60116ef75dada" style="display:block">
+   <label style="display:block" for="field_60116ef75dada">
+   <input id="field_60116ef75dada" name="newsletter" type="checkbox" value="1" checked="checked" /> Receive Newsletter?</label>
    <input type="hidden" name="newsletter_submit" value="1" />
  </div>
  <div>
-   <input id="field_5933365faeb91" name="key" type="hidden" value="value" />
-   <div class="widget field_5933365faee83" style="display:block">
-     <select id="field_5933365faee83" name="gender">
+   <input id="field_60116ef75dc38" name="key" type="hidden" value="value" />
+   <div class="widget field_60116ef75dd23" style="display:block">
+     <select id="field_60116ef75dd23" name="gender">
        <option value="0">Choose Gender:
        </option>
        <option value="M">Male
@@ -222,16 +223,23 @@ Outputs:
      <div style="color:yellow;background:red" class="error">
      </div>
    </div>
-   <button id="field_5933365faef3b" name="submit" style="display:block" value="field_5933365faef3b">Submit
+   <div class="widget field_60116ef75de16" style="display:block">
+     <input id="field_60116ef75de16" name="portfolio_submit" type="file" style="display:none" />
+     <label style="display:block;cursor:pointer" for="field_60116ef75de16">Choose a pdf file</label>
+     <input type="hidden" name="portfolio" value="" />
+     <div style="color:yellow;background:red" class="error">
+     </div>
+   </div>
+   <button id="field_60116ef75de26" name="submit" style="display:block" value="field_60116ef75de26">Submit
    </button>
-   <button id="field_5933365faefdb" name="Cancel" style="display:block" value="field_5933365faefdb">Cancel
+   <button id="field_60116ef75de31" name="Cancel" style="display:block" value="field_60116ef75de31">Cancel
    </button>
  </div>
 </form>
 
 ```
 
-Each field type is defined in its own class. These classes have a repostory of its own too.
+Each field type is defined in its own class. These classes have a repostory of their own too.
 For more info on the fields API, take a look in the following repositories:
 
 - [HtField](http://github.com/flsouto/htfield) - Abstract base class for all fields
@@ -243,6 +251,9 @@ For more info on the fields API, take a look in the following repositories:
     - [HtTextar](http://github.com/flsouto/httextar) - Widget for multi-line text input
     - [HtCheckb](http://github.com/flsouto/htcheckb) - Widget for boolean input (checkbox)
     - [HtSelect](http://github.com/flsouto/htselect) - Widget for choosing an option from a list
+    - [HtUpload](http://github.com/flsouto/htupload) - Widget for uploading a file
+
+Notice: when adding the "upload" field the form will automatically have enctype=multipart/form-data and method=POST
 
 
 ### Make all fields inline at once
@@ -268,21 +279,21 @@ Outputs:
 
 ```html
 
-<form id="form_5933365fb0244" action="?">
- <div class="widget field_5933365fb02d9" style="display:inline-block;vertical-align:text-top">
-   <label style="display:block" for="field_5933365fb02d9">First Name</label>
-   <input id="field_5933365fb02d9" name="fst_name" value="" />
+<form id="form_60116ef75e211" action="?">
+ <div class="widget field_60116ef75e21b" style="display:inline-block;vertical-align:text-top">
+   <label style="display:block" for="field_60116ef75e21b">First Name</label>
+   <input id="field_60116ef75e21b" name="fst_name" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5933365fb0376" style="display:inline-block;vertical-align:text-top">
-   <label style="display:block" for="field_5933365fb0376">Last Name</label>
-   <input id="field_5933365fb0376" name="lst_name" value="" />
+ <div class="widget field_60116ef75e225" style="display:inline-block;vertical-align:text-top">
+   <label style="display:block" for="field_60116ef75e225">Last Name</label>
+   <input id="field_60116ef75e225" name="lst_name" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5933365fb040c" name="submit" style="display:inline-block;vertical-align:text-top" value="field_5933365fb040c">Submit
+   <button id="field_60116ef75e22d" name="submit" style="display:inline-block;vertical-align:text-top" value="field_60116ef75e22d">Submit
    </button>
  </div>
 </form>
@@ -311,21 +322,21 @@ Outputs:
 
 ```html
 
-<form id="form_5933365fb0e4b" action="?">
- <div class="widget field_5933365fb0ee3" style="display:block">
-   <label style="display:block" for="field_5933365fb0ee3">First Name</label>
-   <input id="field_5933365fb0ee3" name="fst_name" value="" readonly="readonly" />
+<form id="form_60116ef75e413" action="?">
+ <div class="widget field_60116ef75e41c" style="display:block">
+   <label style="display:block" for="field_60116ef75e41c">First Name</label>
+   <input id="field_60116ef75e41c" name="fst_name" value="" readonly="readonly" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5933365fb0f81" style="display:block">
-   <label style="display:block" for="field_5933365fb0f81">Last Name</label>
-   <input id="field_5933365fb0f81" name="lst_name" value="" readonly="readonly" />
+ <div class="widget field_60116ef75e425" style="display:block">
+   <label style="display:block" for="field_60116ef75e425">Last Name</label>
+   <input id="field_60116ef75e425" name="lst_name" value="" readonly="readonly" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5933365fb1018" name="submit" style="display:block" value="field_5933365fb1018">Submit
+   <button id="field_60116ef75e42d" name="submit" style="display:block" value="field_60116ef75e42d">Submit
    </button>
  </div>
 </form>
@@ -363,13 +374,13 @@ Outputs:
 ```html
 
 <form id="my_form" action="some_script.php" method="post" class="some_class">
- <div class="widget field_5933365fb1b11" style="display:block">
-   <input id="field_5933365fb1b11" name="email" value="" />
+ <div class="widget field_60116ef75e604" style="display:block">
+   <input id="field_60116ef75e604" name="email" value="" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
  <div>
-   <button id="field_5933365fb1bb2" name="submit" style="display:block" value="field_5933365fb1bb2">Submit
+   <button id="field_60116ef75e60d" name="submit" style="display:block" value="field_60116ef75e60d">Submit
    </button>
  </div>
 </form>
@@ -405,21 +416,21 @@ Outputs:
 
 ```html
 
-<form id="form_5933365fb235c" action="?">
- <div class="widget field_5933365fb23f0" style="display:block">
-   <label style="display:block" for="field_5933365fb23f0">Name</label>
-   <input id="field_5933365fb23f0" name="name" value="Mary" />
+<form id="form_60116ef75e78b" action="?">
+ <div class="widget field_60116ef75e793" style="display:block">
+   <label style="display:block" for="field_60116ef75e793">Name</label>
+   <input id="field_60116ef75e793" name="name" value="Mary" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5933365fb2490" style="display:block">
-   <label style="display:block" for="field_5933365fb2490">Email</label>
-   <input id="field_5933365fb2490" name="email" value="dontmaryme@doman.com" />
+ <div class="widget field_60116ef75e79d" style="display:block">
+   <label style="display:block" for="field_60116ef75e79d">Email</label>
+   <input id="field_60116ef75e79d" name="email" value="dontmaryme@doman.com" />
    <div style="color:yellow;background:red" class="error">
    </div>
  </div>
- <div class="widget field_5933365fb2523" style="display:block">
-   <select id="field_5933365fb2523" name="job">
+ <div class="widget field_60116ef75e7a3" style="display:block">
+   <select id="field_60116ef75e7a3" name="job">
      <option value="0">Job:
      </option>
      <option value="1" selected="selected">Secretary
@@ -433,7 +444,7 @@ Outputs:
    </div>
  </div>
  <div>
-   <button id="field_5933365fb25c4" name="submit" style="display:block" value="field_5933365fb25c4">Submit
+   <button id="field_60116ef75e7ac" name="submit" style="display:block" value="field_60116ef75e7ac">Submit
    </button>
  </div>
 </form>
@@ -539,7 +550,7 @@ FlSouto\HtFormResult Object
     [data] => Array
         (
             [name] => 
-            [email] => 
+            [email] => dontmaryme__doman.com
         )
 
     [errors] => Array
